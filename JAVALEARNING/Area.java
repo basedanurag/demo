@@ -1,0 +1,24 @@
+package demo.JAVALEARNING;
+
+import java.util.Scanner;
+
+public class Area {
+    public static void main(String[] args) {
+        /* this is the programme for area of the triangle */
+        Scanner s=new Scanner(System.in);
+
+        int height,base;
+        float Area;
+        System.out.println("enter height and base of the triangle");
+        System.out.println("enter height");
+        height= s.nextInt();
+        System.out.println("enter base");
+
+        base=s.nextInt();
+
+
+        Area= 1f/2f* ( base * height );
+        System.out.println("the area of the trianle is "+Area);
+
+    }
+}
