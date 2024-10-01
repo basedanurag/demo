@@ -7,14 +7,15 @@ public class Area {
         /* this is the programme for area of the triangle */
         Scanner s=new Scanner(System.in);
 
-        int height,base;
+        float height,base;
         float Area;
         System.out.println("enter height and base of the triangle");
         System.out.println("enter height");
-        height= s.nextInt();
+        height= s.nextFloat();
+
         System.out.println("enter base");
 
-        base=s.nextInt();
+        base=s.nextFloat();
 
 
         Area= 1f/2f* ( base * height );
