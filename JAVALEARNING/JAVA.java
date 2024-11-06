@@ -1,4 +1,4 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 
 public class JAVA {
     public static void main(String[] args) {

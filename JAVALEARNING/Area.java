@@ -1,4 +1,4 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 
 import java.util.Scanner;
 
@@ -20,6 +20,7 @@ public class Area {
 
         Area= 1f/2f* ( base * height );
         System.out.println("the area of the trianle is "+Area);
+        s.close();
 
     }
 }

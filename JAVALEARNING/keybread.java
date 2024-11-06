@@ -1,6 +1,6 @@
-package demo;
+package JAVALEARNING;
 
-import java.lang.*;
+
 import java.util.*;
 class keybread
 {     public static void main(String args[])
@@ -12,5 +12,6 @@ a=s.nextInt();
 b=s.nextInt();
 c=a+b;
 System.out.println("sum is "+c);
+s.close();
 }
 }

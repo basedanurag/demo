@@ -1,4 +1,4 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 import java.util.Scanner;
 public class Root {
     public static void main(String[] args) {
@@ -16,6 +16,7 @@ public class Root {
         r2=(-b-D)/2*a;
         System.out.println("the roots of quadratic equation are r1=%d\n"+r1);
         System.out.println("the roots of quadratic equation are r2=%d \n "+r2);
+        s.close();
 
 
 

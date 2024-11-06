@@ -1,6 +1,5 @@
-package demo;
+package JAVALEARNING;
 
-import java.lang.*;
 class Datatypeconversion
 {
       public static void main(String arg[])

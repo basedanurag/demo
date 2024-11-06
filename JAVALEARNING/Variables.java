@@ -1,6 +1,6 @@
-package demo;
+package JAVALEARNING;
 
-import java.lang.*;
+
 
 class Variables 
 { 

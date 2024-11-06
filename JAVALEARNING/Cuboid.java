@@ -1,4 +1,4 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 
 import java.util.Scanner;
 
@@ -15,6 +15,7 @@ public class Cuboid {
         volume=l*b*h;
         System.out.println("Area of the cuboid is "+Area);
         System.out.println("volume of the cuboid is "+volume);
+        s.close();
     }
 
 }
