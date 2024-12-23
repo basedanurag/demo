@@ -10,7 +10,9 @@ public class Q9 {
         // If the number is negative or ends with 0 but is not 0, it cannot be a palindrome
         if (x < 0 || (x != 0 && x % 10 == 0)) {
             System.out.println("false");
+            s.close();
             return;
+            
         }
 
         rev = 0;
@@ -27,6 +29,7 @@ public class Q9 {
             System.out.println("true");
         } else {
             System.out.println("false");
+            s.close();
         }
     }
 }

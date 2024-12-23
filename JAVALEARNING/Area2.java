@@ -1,4 +1,4 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 
 import java.util.Scanner;
 
@@ -23,6 +23,8 @@ public class Area2 {
         Area = Math.sqrt(sc*(sc-height)*(sc-base)*(sc-c));
 
                 System.out.println("the area of the trianle is "+Area);
+                s.close();
+            
 
     }
 }

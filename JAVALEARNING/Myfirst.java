@@ -1,6 +1,6 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 
-import java.lang.*;
+
 class Myfirst
 {  
     public static void main(String arg[])

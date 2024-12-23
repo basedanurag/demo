@@ -1,4 +1,4 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 
 import java.util.Scanner;
 
@@ -11,6 +11,7 @@ public class Anurag {
         b= s.nextInt();
         c=a+b;
         System.out.println(c);
+        s.close();
 
     }
 }

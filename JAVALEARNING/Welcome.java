@@ -1,6 +1,5 @@
-package demo.JAVALEARNING;
+package JAVALEARNING;
 
-import java.lang.*;
 import java.util.*;
 class Welcome
 {
@@ -11,6 +10,7 @@ class Welcome
              System.out.println("enter your name ");
       name = s.nextLine();
  System.out.println("welcome " + name);
+ s.close();
 }
 
 
