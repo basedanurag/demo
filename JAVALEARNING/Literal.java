@@ -1,7 +1,7 @@
-package JAVALEARNING;
 
 
-class Literal
+
+public class Literal
 {
       public static void main(String arg[])
       { 

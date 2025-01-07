@@ -1,4 +1,4 @@
-package JAVALEARNING;
+
 
 public class Bitwisedemo {
     public static void main(String[] args) {

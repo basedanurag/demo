@@ -1,4 +1,4 @@
-package JAVALEARNING;
+
 // swapping of two numbers without using a third variable and using xor operator
 
 import java.util.Scanner;
