@@ -12,6 +12,7 @@ public class Q1408{
             for(int j=0;j<n;j++)
             { if (i==j)
                  continue;
+                 //learn these functions
                  if(words[j].contains(words[i]))
                  {
                     result.add(words[i]);
