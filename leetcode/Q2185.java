@@ -4,7 +4,7 @@ public class Q2185 {
            for(String word : words){
             if (word.startsWith(pref)){
                 count ++;
-    
+
             }
         
            }   return count ;
