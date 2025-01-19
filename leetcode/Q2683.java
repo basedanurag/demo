@@ -2,7 +2,7 @@ public class Q2683 {
     
     public boolean doesValidArrayExist(int[] der) {
      int sum =0;
-     int n = der.length;
+     
          for(int num : der){
             sum += num;
          }
