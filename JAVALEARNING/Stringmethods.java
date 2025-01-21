@@ -1,7 +1,7 @@
 public class Stringmethods {
     public static void main (String[] args )
     {
-        String str = new String ("Anurag srivastava");
+         String str = new String ("Anurag srivastava");
      /* using .length();method
             System.out.println(str.length()); 
             or we can do this
@@ -34,7 +34,23 @@ public class Stringmethods {
        String str2  = str.replace('i','m');
      System.out.println(str2 +"<-new String , old String -> " + str);
      */
-    }
+     /* using .startsWith()/endsWith() method 
+     System.out.println(str.startsWith("va" ));
+      System.out.println(str.endsWith("va" )); */
+     /* using .charAt(index of Strings);
+      System.out.println(str.charAt(1));
+      // we can use it for printing the whole String
+      for(int i =0 ; i< str.length(); i++){
+        System.out.print(str.charAt(i)); 
+    }//if we use println then the output of the string will be one element per line but to print it all together we use print */
+     /* using .indexOf(); ,method
+     System.out.println(str.indexOf('a',5));
+     System.out.println(str.lastIndexOf('a')); */
+     System.out.println(str);
+     
 
-    
-}
+        
+      }
+
+
+    }
