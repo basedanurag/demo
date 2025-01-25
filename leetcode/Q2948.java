@@ -40,6 +40,7 @@ public class Q2948 {
     }
     */
     //optimal Solution
+    //this question is done because of brute force thinking
 
     public int[] lexicographicallySmallestArray(int[] nums, int limit) {
         int n = nums.length;
