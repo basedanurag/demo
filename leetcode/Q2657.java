@@ -5,7 +5,8 @@ public class Q2657 {
          int n = A.length;
          int[] result = new int [n];
          
-     HashMap< Integer , Integer > mp = new HashMap();
+    
+    HashMap< Integer , Integer > mp = new HashMap<>();
 
          int count = 0;
          for (int i=0; i<n ;  i++){
