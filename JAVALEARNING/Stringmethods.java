@@ -1,7 +1,7 @@
 public class Stringmethods {
     public static void main (String[] args )
     {
-         String str = new String ("Anurag srivastava");
+        // String str = new String ("Anurag srivastava");
      /* using .length();method
             System.out.println(str.length()); 
             or we can do this
@@ -43,14 +43,60 @@ public class Stringmethods {
       for(int i =0 ; i< str.length(); i++){
         System.out.print(str.charAt(i)); 
     }//if we use println then the output of the string will be one element per line but to print it all together we use print */
-     /* using .indexOf(); ,method
+     /* using .indexOf(); ,methof
      System.out.println(str.indexOf('a',5));
      System.out.println(str.lastIndexOf('a')); */
-     System.out.println(str);
-     
+    /*  using .equals();
+       String str1 = "pyramid";
+       // String str2 = "pyramid"; // true 
+        String str3 = "Pyramid"; //false 
+        // this happens because both the String contains different chars they are not equals
+        System.out.println(str1.equals(str3));
+      */
+      /*using .equalsIgnoreCase();
+      this method works the same as .equals() it just ignore the cases of a string 
+       *  String str1 = "pyramid";
+       // String str2 = "pyramid"; // true 
+        String str3 = "Pyramid"; //true here this method will ignore the case of String and give output
+       */
+     /* // using (==);
 
-        
-      }
-
+     here we are using the refrences of the base address we are comparing these two String it doesnt means that both the Strings are equal it means that both the refferences are pointing towards the same object 
+       String str1 = "pyramid"; 
+       String str2 = "pyramid"; // true 
+      // String str3 = "Pyramid"; //false 
+         System.out.println(str1==str2);
+          String str4 = new "pyramid"; // false as the new object created in heap memory the reference address will be different and the output will be false here 
+     */
+     /*// using .compareTo();
+     // here the String will compare the Strings pass through it and will return the difference of those Strings ASCII codes of the first letter of the String 
+     String str1 = "pyramid";
+    // String str3 = "pyramid"; // both the first letters are same so the difference will be 0
+    //String str3 = "Pyramid"; // here the output will be + because of the character ASCII codes the 'p' is > 'P' hence the positive result 
+      // if i use a smaller letter as 'a' at str1 and a bigger letter for example 'w' at str3 then the output will be -
+     // System.out.println(str1.compareTo(str3));
+     // we also have one more method which is .compareToIgnoreCase(); this will ignore the case of the Strings and give output so if the word is same in other Strings and the case are not same so if we use this method then we can use it to find the diff but the result will be 0"if the Strings are same "
+     */
+    /*  // using .contains();
+      // this method will tell if there is object present or not 
+      String str1 = "the great wall of china";
+      System.out.println(str1.contains("wall"));// true
+      System.out.println(str1.contains("anurag")); //false
+      */
+     /* //using .concat();
+      //here this method will add these Strings and create a new String as the Strings are immutable means they cant be modified so it will create a new String 
+      String str1 = "the great";
+      String str2 = " wall of china";
+      System.out.println(str1.concat(str2));
+      System.out.println(str1 + str2); // this also works so its not necessary to call the method to add a String the output will be same as the  .concat() 
+      // NOTE : the + is not adding those String but it is attaching those Strings 
+*/
+    /*  // using .valueOf();
+      // we can use this method to convert other type of data into String type of data
+      int i =10 ;
+      String.valueOf(i);
+     */ 
+  
 
     }
+}
