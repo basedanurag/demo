@@ -34,6 +34,8 @@ public class Stringpractice {
         String str2=new String("Java"); // here the code will show the output as false because of the new keyword the string is now saved in the heap memory
         System.out.println(str1==str2); */
 
+        
+
     }
     
 }

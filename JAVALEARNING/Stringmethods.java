@@ -1,6 +1,7 @@
+import java.lang.String;
 public class Stringmethods {
     public static void main (String[] args )
-    {
+    {      
         // String str = new String ("Anurag srivastava");
      /* using .length();method
             System.out.println(str.length()); 
@@ -96,7 +97,38 @@ public class Stringmethods {
       int i =10 ;
       String.valueOf(i);
      */ 
+        
+     // Students challange -1
+    /*    String str1 = "programmer@gmail.com";
+        String str2 = "gmail";
+
+        System.out.println(str1.indexOf("@"));
+        int i = str1.indexOf("@");
+        int j = str1.indexOf(".");
+        System.out.println(str1.startsWith("programmer"));
+        System.out.println(str1.substring(0,i)) ;
+        System.out.println(str1.substring(i+1, j));
+        System.out.println(str1.contains(str2));*/
+     // students challange -2
+     
+    /* String str1 ="01/12/2000";
   
+
+     System.out.println(str1.matches("[0-3][0-9]/[01][0-9]/[0-9]{4}"));*/
+     
+
+     //student challange 
+     String str = "     abc    e@#$     189U    @*@      ";
+
+     str = str.replaceAll("\\s+", " ").trim();
+     String words[] = str.split("\\s");
+
+     System.out.println(words.length);
+
+     
+
+
+
 
     }
 }
