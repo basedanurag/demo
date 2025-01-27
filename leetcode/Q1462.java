@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.Set;
 
 public class Q1462 {
- // Approach-1 (Using DFS) - You can use BFS as well
+/* // Approach-1 (Using DFS) - You can use BFS as well
 // T.C : O(Q * (V+E))
 // S.C : O(V+E)
     public List<Boolean> checkIfPrerequisite(int numCourses, int[][] prerequisites, int[][] queries) {
@@ -110,7 +110,7 @@ class Solution {
         return false;
     }
 
-}
+} */
 //Approach-3 (Kahn's Algorithm)
 //T.C : O(V^2 + V + E) -> Processing Nodes (each node pushed once in queue) = O(V), Processing edges = O(E), Inserting prerequisites (each node can have ~V prerequisites in worst case): O(V^2)
 //S.C : O(V+E)
