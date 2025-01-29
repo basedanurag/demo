@@ -23,14 +23,14 @@ public class RegularExpression {
         // Meta character 
 
 
-        /*String str1="b";
-        System.out.println(str1.matches("\\w")); anything wither a number or a alphabet it will work
-         */
+        String str1="b";
+        System.out.println(str1.matches("\\w"));// anything wither a number or a alphabet it will work
+         
         
         /*String str1="5";
         System.out.println(str1.matches("\\d")); it works for digits */
         
-        String str1="$";
+      //  String str1="$";
         System.out.println(str1.matches("\\D")); //it is not a 
         
         //Quantifiers
