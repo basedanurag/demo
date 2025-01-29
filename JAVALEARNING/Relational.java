@@ -96,8 +96,18 @@ Scanner s  = new Scanner(System.in);
  a = s.nextInt();
 
 if ( a %4 == 0){
-    System.out.println("leapyear");
-} else {
+      if(a % 100 == 0){
+        if(a%400==0) {
+            System.out.println("is a leap year");
+
+        } else {
+            System.out.println("not a leap year");
+        }
+
+    }else{
+        System.out.println("is a leap year");
+    }
+}else {
     System.out.println("not a leap year");
 } s.close();
     }
