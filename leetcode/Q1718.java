@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q1718 {
  
         public boolean solve( int i , int n, int[] result, boolean[] used){
