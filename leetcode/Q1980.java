@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class Q1980 {
    
         public String findDifferentBinaryString(String[] nums) {
