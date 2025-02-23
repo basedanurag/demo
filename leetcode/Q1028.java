@@ -1,7 +1,7 @@
-import javax.swing.tree.TreeNode;
+
 
 public class Q1028 {
-    class Solution {
+  /*   class Solution {
         private int n;
         
         private TreeNode solve(String traversal, int[] index, int depth) {
@@ -41,5 +41,5 @@ public class Q1028 {
             return solve(traversal, index, 0);
         }
     }
-    
+    */
 }

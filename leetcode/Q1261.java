@@ -1,10 +1,7 @@
-import java.util.HashSet;
-import java.util.Set;
 
-import javax.swing.tree.TreeNode;
 
 public class Q1261 {
-    class FindElements {
+   /*  class FindElements {
     Set<Integer> st = new HashSet<>();
 
     private void dfs(TreeNode root, int x) {
@@ -25,5 +22,5 @@ public class Q1261 {
     public boolean find(int target) {
         return st.contains(target);
     }
-}
+} */
 }

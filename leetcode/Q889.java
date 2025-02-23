@@ -1,5 +1,7 @@
+
+
 public class Q889 {
-    class Solution {
+  /*  class Solution {
         public TreeNode solve(int prestart, int poststart, int preend,int[] preorder, int[] postorder, Map<Integer,Integer> mp) {
             if (prestart>preend){
                 return null;
@@ -28,5 +30,5 @@ public class Q889 {
             }
             return solve(0,0,n-1, preorder, postorder, mp);
         }
-    }
+    } */
 }
