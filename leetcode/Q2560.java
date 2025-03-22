@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q2560 {
     class Solution {
         private boolean isPossible(int[] nums, int mid, int k) {
@@ -13,7 +15,7 @@ public class Q2560 {
         }
         
         public int minCapability(int[] nums, int k) {
-            int n = nums.length;
+            
             
             int l = Arrays.stream(nums).min().getAsInt();
             int r = Arrays.stream(nums).max().getAsInt();

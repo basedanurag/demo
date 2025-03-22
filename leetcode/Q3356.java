@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q3356 {
     /*class Solution {
     private int n;
