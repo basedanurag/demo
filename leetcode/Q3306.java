@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Q3306 {
     class Solution {
         private boolean isVowel(char ch) {

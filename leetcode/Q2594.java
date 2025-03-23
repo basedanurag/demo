@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q2594 {
     class Solution {
         private boolean isPossible(int[] ranks, long mid, int cars) {
