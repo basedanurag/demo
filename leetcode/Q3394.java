@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Q3394 {
     class Solution {
         public int[][] merge(int[][] intervals) {

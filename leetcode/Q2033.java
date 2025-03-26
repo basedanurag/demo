@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Q2033 {
     class Solution {
         public int minOperations(int[][] grid, int x) {
