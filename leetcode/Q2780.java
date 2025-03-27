@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.List;
+
 public class Q2780 {
     class Solution {
         public int minimumIndex(List<Integer> nums) {
