@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Q2551 {
     class Solution {
         public long putMarbles(int[] weights, int k) {
