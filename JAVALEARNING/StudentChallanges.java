@@ -83,7 +83,7 @@ public class StudentChallanges {
     sc.close();
     }*/
     // checking the website 
-    public static void main(String[] args){
+   /* public static void main(String[] args){
     System.out.println("enter the website as a String");
     Scanner sc = new Scanner (System.in);
     String site = sc.nextLine();
@@ -104,4 +104,29 @@ sc.close();
 
     }
 
+}*/
+public static void main(String[] args) {
+    Scanner  sc = new Scanner(System.in);
+    System.out.println("enter 1st number");
+    int a = sc.nextInt();
+    System.out.println("enter 2nd number");
+    int b =  sc.nextInt();
+    sc.nextLine();
+    System.out.println("enter operation ADD, SUB, MUL,DIV");
+    String option = sc.nextLine();
+    option = option.toUpperCase();
+    switch(option){
+        case "ADD" : System.out.println("the addition is " +(a+b));
+                    break;
+        case "SUB" : System.out.println("the sub is "+ (a-b));
+                    break; 
+        case "MUL" : System.out.println("the multiplication is " + (a*b));
+                    break;
+        case "DIV" : System.out.println("the division is " +(a/b)); 
+                    break;
+        default : System.out.println("invalid option");
+                   break;                                 
+    }
+    sc.close();
+}
 }
