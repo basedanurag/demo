@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q2563 {
     class Solution {
         public long lowerBound(int[] nums, int low, int high, int element) {
