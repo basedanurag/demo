@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Q781 {
     class Solution {
         public int numRabbits(int[] answers) {
