@@ -1,3 +1,6 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public  class Q2444 {
     class Solution {
         public long countSubarrays(int[] nums, int minK, int maxK) {
