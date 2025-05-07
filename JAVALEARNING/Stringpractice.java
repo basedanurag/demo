@@ -1,3 +1,4 @@
+package JAVALEARNING;
 public class Stringpractice {
     public static void main(String[] args){
        /*  String str1 = "java program";
