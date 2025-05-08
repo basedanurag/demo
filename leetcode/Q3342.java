@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class Q3342 {
     class Solution {
         public int minTimeToReach(int[][] moveTime) {
