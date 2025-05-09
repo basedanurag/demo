@@ -1,3 +1,5 @@
+package JAVALEARNING;
+
 public class test {
 
 

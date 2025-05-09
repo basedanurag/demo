@@ -1,3 +1,4 @@
+package JAVALEARNING;
 import java.util.Scanner;
 
 public class Prime {
