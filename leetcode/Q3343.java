@@ -1,3 +1,4 @@
+class Q3343 {
 class Solution {
     private static final int mod = 1_000_000_007;
     private long[] fact, inv, invFact;
@@ -32,4 +33,5 @@ class Solution {
         for (int cnt : digits) res = res * invFact[cnt] % mod;
         return (int)res;
     }
+}
 }
