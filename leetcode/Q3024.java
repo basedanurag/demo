@@ -5,7 +5,7 @@ import java.util.Set;
 public class Q3024 {
     class Solution {
     public String triangleType(int[] nums) {
-        int n = nums.length;
+        
         Arrays.sort(nums);
         Set<Integer> set = new HashSet<>();
         for(int num : nums)
