@@ -1,5 +1,5 @@
-package JAVALEARNING;
-class twoSum {
+
+class twoSum1 {
 
     public int[] twoSum(int[] nums, int target) 
     { int i,j;
