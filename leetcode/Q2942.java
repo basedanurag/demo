@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Q2942 {
     class Solution {
     public List<Integer> findWordsContaining(String[] words, char x) {
