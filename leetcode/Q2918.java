@@ -1,3 +1,4 @@
+public class Q2918{
 class Solution {
     public long minSum(int[] nums1, int[] nums2) {
         long z1 = 0, z2 = 0;
@@ -9,4 +10,5 @@ class Solution {
         if ((s1 < s2 && z1 == 0) || (s2 < s1 && z2 == 0)) return -1;
         return Math.max(s1, s2);
     }
+}
 }

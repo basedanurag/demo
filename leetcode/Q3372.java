@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Q3372 {
     class Solution {
-    private List<Integer>> buildList(int[][] edges){
+    private List<List<Integer>> buildList(int[][] edges){
         int n  = edges.length + 1;
         List<List<Integer>> adj = new ArrayList<>(n);
         for(int i = 0; i < n; i++) adj.add(new ArrayList<>(n));
