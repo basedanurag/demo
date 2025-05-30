@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q2359 {
     class Solution {
     private void dfs(int current, int distance, int[] edges, int[] distances) {
