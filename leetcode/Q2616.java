@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q2616 {
     class Solution {
     public int minimizeMax(int[] nums, int p) {
