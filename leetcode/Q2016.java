@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Q2016 {
     class Solution {
     public int maximumDifference(int[] nums) {
