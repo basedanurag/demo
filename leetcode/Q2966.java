@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q2966 {
     class Solution {
     public int[][] divideArray(int[] nums, int k) {
