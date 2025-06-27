@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Q2014 {
     class Solution {
     public String longestSubsequenceRepeatedK(String s, int k) {
