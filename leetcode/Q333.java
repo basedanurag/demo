@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Q333 {
     class Solution {
     final int M = (int) 1e9 + 7;
