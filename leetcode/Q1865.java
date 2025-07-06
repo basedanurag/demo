@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Q1865 {
     class FindSumPairs {
     int[] n1, n2;
