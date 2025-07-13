@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q2410 {
     class Solution {
 
