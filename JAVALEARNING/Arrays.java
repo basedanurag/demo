@@ -14,8 +14,9 @@ public class Arrays {
         //search(arr,search);
         //secondMax(arr);
         //rightRotate(arr);
-        delete(newArr,  2); // Example: insert 99 at index 6
-
+        //delete(newArr,  2); // Example: insert 99 at index 6
+        //copy(arr);  
+        reverse(arr);
    
     }
    
@@ -147,6 +148,33 @@ public class Arrays {
 
          for(int x : arr) System.out.print(x + " ");
         System.out.println();
+    }
+    static void  copy(int[] arr){
+        int [] newArre = new int[arr.length];
+        for(int i = 0; i < arr.length; i++){
+            newArre[i] = arr[i];
+        
+        }
+        for(int c : arr){
+            System.out.print(c +",");
+            System.out.print("");
+        }
+    }
+    static void reverse(int[] arr){
+        int[] rev =  new int[arr.length];
+        for(int i = arr.length - 1,j =0; i >= 0; i--,j++){
+              rev[j] =  arr[i];
+                        
+        } //Before rev
+          for(int c : arr){
+            System.out.print(c +",");
+            System.out.print("");
+        }
+        System.out.println("after reverse");
+          for(int c : rev){
+            System.out.print(c +",");
+            System.out.print("");
+        }
     }
 }
 
