@@ -20,13 +20,19 @@ public class methods {
        }
         return num1;
     }
-
+ static void  update(int A[]){
+    A[0] = 25;
+   
+    
+ }
     public static void main(String[] args) {
         int num1 = 15;
         int num2 = 50;
+       int [] A = new int[5];
         
         //boolean res  = isPrime(num);
-      int n =  GCD(num1, num2);
-        System.out.println(n+" ");
+         update(A);
+        System.out.println(A[0] +" ");
+       
     }
 }
