@@ -20,9 +20,6 @@ public class reccursion {
         fun(n);
          System.out.println(" ");
         fun2(n);
-        
-
-
     }
    
 }
