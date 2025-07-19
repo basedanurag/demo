@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Q1233 {
     class Solution {
     public List<String> removeSubfolders(String[] folder) {
