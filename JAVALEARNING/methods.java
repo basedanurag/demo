@@ -26,8 +26,8 @@ public class methods {
     
  }
     public static void main(String[] args) {
-        int num1 = 15;
-        int num2 = 50;
+       // int num1 = 15;
+       // int num2 = 50;
        int [] A = new int[5];
         
         //boolean res  = isPrime(num);
