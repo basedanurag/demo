@@ -3,7 +3,8 @@ public class Q3170 {
     class Solution {
     public String clearStars(String s) {
           char[] arr = s.toCharArray();
-        List<Integer>[] pos = new ArrayList[26];
+        @SuppressWarnings("unchecked")
+        List<Integer>[] pos = (List<Integer>[]) new ArrayList[26];
         for (int i = 0; i < 26; i++) pos[i] = new ArrayList<>();
         PriorityQueue<Character> pq = new PriorityQueue<>();
         for(int i = 0; i < arr.length; i++) {
