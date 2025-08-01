@@ -176,11 +176,6 @@ public class Arrays {
             System.out.print("");
         }
     }
-
-    public static void sort(String[] folder) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sort'");
-    }
 }
 
 

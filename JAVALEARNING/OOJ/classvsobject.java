@@ -1,7 +1,8 @@
 package OOJ;
+
 class classvsobject {
-    private int channel;
-    private int volume;
+   // private int channel;
+   // private int volume;
     public void changeChannel(){
             // try code
     }
