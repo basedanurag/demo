@@ -1,4 +1,3 @@
-package OOJ;
 
 class classvsobject {
    // private int channel;
