@@ -50,8 +50,10 @@ public class Shapes {
     public static void main(String[] args){
         Cylinder c = new Cylinder();
        Rectangle R1 = new Rectangle();
+       //length and breadth of the rectangle 
        R1.setLength(5);
        R1.setBreadth(5);
+
        //radius and height of the cylinder 
        c.radius = 7;
        c.height = 10;
