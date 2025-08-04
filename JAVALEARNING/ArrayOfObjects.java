@@ -19,10 +19,10 @@ class Subjects{
     
     // WRITEABLE SET METHODS
     public void setmaxMarks(int mm){
-        this.maxMarks = mm;
+        maxMarks = mm;
     }
     public void setmarksObtained(float m){
-        this.marksObtained = m;
+        marksObtained = m;
     }
     boolean isQualified(float m){
         return m >= maxMarks / 10 * 4;
