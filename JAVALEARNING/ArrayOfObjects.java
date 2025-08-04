@@ -37,6 +37,47 @@ class Subjects{
 
 
 }
+ class Student {
+    private long rollno;
+    private String name;
+    private String dept;
+    private String subjects;
+
+    public Student(long rollno, String name, String dept, String subjects ){
+        this.rollno =rollno;
+        this.name = name;
+        setDept(dept);
+       setSubjects(subjects);
+    }
+    // get methods
+    public long getrollno(long rollno){
+        return rollno;
+    }
+    public String getname(String name){
+        return name;
+    }
+    public String getdept(String dept){
+        return dept;
+    }
+    public String  getSubjects(String subjects){
+        return subjects;
+    }
+    // WRITEABLE SET METHODS
+    public void setDept(String mm){
+        dept = mm;
+    }
+    public void setSubjects(String m){
+        subjects= m;
+    }
+    public String toString(){
+        return "\nstudent roll number  "+ rollno + 
+        "\nstudent name "+ name +
+        "\nstudent dept " + dept+ 
+        "\nStudent subjects "+ subjects;
+    }
+
+
+}
 public class ArrayOfObjects {
     public static void main(String[] args) {
 
@@ -61,5 +102,18 @@ s[2].setmaxMarks(100);
      for(Subjects sub : s){
         System.out.println(sub);
      }
+
+     // Create Student objects and fill with data
+     // Create array of Student objects
+     Student[] students = new Student[3];
+     students[0] = new Student(2302300100034L, "Anurag", "CSE", "BCS-401, ahgda");
+     students[1] = new Student(2302300100035L, "Riya", "ECE", "BCS-401, ahgda");
+     students[2] = new Student(2302300100036L, "Amit", "ME", "BCS-401, ahgda");
+
+     for (Student st : students) {
+         System.out.println(st);
+     }
+
+     
     }
 }
