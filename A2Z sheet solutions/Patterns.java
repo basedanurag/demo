@@ -150,7 +150,7 @@ public static void p10(int n ){
           System.out.println();
     }
 }
-    
+    //saving the streak commit
 
     public static void main(String[] args){
        System.out.println("pattern 1");
