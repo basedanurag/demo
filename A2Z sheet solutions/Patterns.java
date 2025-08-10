@@ -150,7 +150,37 @@ public static void p10(int n ){
           System.out.println();
     }
 }
-    //saving the streak commit
+public static void p11(int n){
+    for(int i  =0 ; i < n; i++){
+        for(int j = 0; j <= i;j++){
+            if((i + j) % 2 == 0)
+             System.out.print(" 1 ");
+             else
+             System.out.print(" 0 ");
+        }
+        System.out.println();
+    }
+}
+public static void p12(int n){
+    int space = 2 *(n - 1);
+
+    for(int i = 1; i  < n; i++){
+        
+        for(int j = 1; j <= i; j++){
+            System.out.print(j);
+        }
+        for(int s = 0; s <= space ; s++){
+            System.out.print(" ");
+        }
+        for(int k = i; k >= 1; k--){
+
+            System.out.print(k);
+        }
+        System.out.println();
+
+        space -= 2;
+    }
+}
 
     public static void main(String[] args){
        System.out.println("pattern 1");
@@ -173,6 +203,10 @@ public static void p10(int n ){
          p9(5);
          System.out.println("pattern 10");
          p10(5);
+         System.out.println("pattern 11");
+         p11(5);
+         System.out.println("pattern 12");
+         p12(5);
 
 
     }
