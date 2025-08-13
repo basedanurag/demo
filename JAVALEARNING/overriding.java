@@ -13,7 +13,7 @@ class sub extends Super{
 public class overriding {
     // practising over riding + Dynamic method dispatch
     public static void main(String[] args) {
-      Super s = new sub(); // why error ?
+      Super s = new sub(); 
       s.display();
     }
 }
