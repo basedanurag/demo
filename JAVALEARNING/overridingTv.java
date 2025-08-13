@@ -9,6 +9,7 @@ class SmartTv extends TV{
     public void switchOn(){ System.out.println("smartTV is switched on");}
     @Override
     public void changeaChannel(){ System.out.println("smartTV  channel is changed");}
+    // extra feature 
     public void browsing(){ System.out.println("smartTv is browsing");}
 }
 
