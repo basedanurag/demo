@@ -263,6 +263,17 @@ public class Patterns {
             System.out.println();
         }
     }
+        public static void p18(int n) {
+      
+        for (int i = 0; i < n; i++) {
+            char c = 'E';
+            for (int j = 0; j <= i; j++) {
+                System.out.print( c +" ");
+                
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
         System.out.println("pattern 1");
@@ -299,6 +310,8 @@ public class Patterns {
         p16(5);
         System.out.println("pattern 17");
         p17(5);
+        System.out.println("pattern 18");
+        p18(5);
 
     }
 }
