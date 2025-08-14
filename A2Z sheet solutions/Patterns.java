@@ -266,11 +266,82 @@ public class Patterns {
         public static void p18(int n) {
       
         for (int i = 0; i < n; i++) {
-            char c = 'E';
-            for (int j = 0; j <= i; j++) {
+            for ( char c = (char)(int)('A' + n-1 - i); c <= (char)(int)('A' + n - 1); c++) {
                 System.out.print( c +" ");
                 
             }
+            System.out.println();
+        }
+    }
+    public static void p19(int n) {
+         int space = 0;
+         int space2 = 2*n ;
+         //upper
+        for (int i = 0; i < n; i++) {
+           
+            for (int j = 0; j <= n - i ; j++) {
+                System.out.print("*");
+            }
+            for (int s = 1; s <= space; s++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= n - i ; k++) {
+                System.out.print("*");
+            }
+            space+=2;
+
+            System.out.println();
+        }
+        //lower
+        for (int i = 0; i <= n; i++) {
+            // space
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            } // stars
+            for (int s = 1; s <= space2; s++) {
+                System.out.print(" ");
+            }
+            // space
+            for (int k = 0; k <= i ; k++) {
+                System.out.print("*");
+            }
+            space2 -=2;
+            System.out.println();
+        }
+
+    }
+    public static void p20(int n) {
+
+        int space = 0;
+         int space2 = 2*n ;
+        for (int i = 0; i < n; i++) {
+            // space
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            } // stars
+            for (int s = 1; s <= space2; s++) {
+                System.out.print(" ");
+            }
+            // space
+            for (int k = 0; k <= i ; k++) {
+                System.out.print("*");
+            }
+            space2 -=2;
+            System.out.println();
+        }
+        for (int i = 0; i <= n; i++) {
+           
+            for (int j = 0; j <= n - i ; j++) {
+                System.out.print("*");
+            }
+            for (int s = 1; s <= space; s++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k <= n - i ; k++) {
+                System.out.print("*");
+            }
+            space+=2;
+
             System.out.println();
         }
     }
@@ -312,6 +383,10 @@ public class Patterns {
         p17(5);
         System.out.println("pattern 18");
         p18(5);
+        System.out.println("pattern 19");
+        p19(5);
+        System.out.println("pattern 20");
+        p20(5);
 
     }
 }
