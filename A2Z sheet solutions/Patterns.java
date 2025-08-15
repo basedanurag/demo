@@ -263,36 +263,38 @@ public class Patterns {
             System.out.println();
         }
     }
-        public static void p18(int n) {
-      
+
+    public static void p18(int n) {
+
         for (int i = 0; i < n; i++) {
-            for ( char c = (char)(int)('A' + n-1 - i); c <= (char)(int)('A' + n - 1); c++) {
-                System.out.print( c +" ");
-                
+            for (char c = (char) (int) ('A' + n - 1 - i); c <= (char) (int) ('A' + n - 1); c++) {
+                System.out.print(c + " ");
+
             }
             System.out.println();
         }
     }
+
     public static void p19(int n) {
-         int space = 0;
-         int space2 = 2*n ;
-         //upper
+        int space = 0;
+        int space2 = 2 * n;
+        // upper
         for (int i = 0; i < n; i++) {
-           
-            for (int j = 0; j <= n - i ; j++) {
+
+            for (int j = 0; j <= n - i; j++) {
                 System.out.print("*");
             }
             for (int s = 1; s <= space; s++) {
                 System.out.print(" ");
             }
-            for (int k = 0; k <= n - i ; k++) {
+            for (int k = 0; k <= n - i; k++) {
                 System.out.print("*");
             }
-            space+=2;
+            space += 2;
 
             System.out.println();
         }
-        //lower
+        // lower
         for (int i = 0; i <= n; i++) {
             // space
             for (int j = 0; j <= i; j++) {
@@ -302,18 +304,19 @@ public class Patterns {
                 System.out.print(" ");
             }
             // space
-            for (int k = 0; k <= i ; k++) {
+            for (int k = 0; k <= i; k++) {
                 System.out.print("*");
             }
-            space2 -=2;
+            space2 -= 2;
             System.out.println();
         }
 
     }
+
     public static void p20(int n) {
 
         int space = 0;
-         int space2 = 2*n ;
+        int space2 = 2 * n;
         for (int i = 0; i < n; i++) {
             // space
             for (int j = 0; j <= i; j++) {
@@ -323,25 +326,52 @@ public class Patterns {
                 System.out.print(" ");
             }
             // space
-            for (int k = 0; k <= i ; k++) {
+            for (int k = 0; k <= i; k++) {
                 System.out.print("*");
             }
-            space2 -=2;
+            space2 -= 2;
             System.out.println();
         }
         for (int i = 0; i <= n; i++) {
-           
-            for (int j = 0; j <= n - i ; j++) {
+
+            for (int j = 0; j <= n - i; j++) {
                 System.out.print("*");
             }
             for (int s = 1; s <= space; s++) {
                 System.out.print(" ");
             }
-            for (int k = 0; k <= n - i ; k++) {
+            for (int k = 0; k <= n - i; k++) {
                 System.out.print("*");
             }
-            space+=2;
+            space += 2;
 
+            System.out.println();
+        }
+    }
+
+    public static void p21(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || j == 0 || i == n - 1 || j == n - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void p22(int n) {
+        
+        for (int i = 0; i <=  2 *n - 1; i++) {
+            for (int j = 0; j <= 2 *n - 1; j++) {
+                int top = i;
+                int left = j;
+                int right = (2 * n - 1) - i;
+                int down = (2 * n - 1) -j;
+                System.out.print(n - Math.min(Math.min(top,down) ,Math.min(left, right))+ " ");
+            }
             System.out.println();
         }
     }
@@ -387,6 +417,10 @@ public class Patterns {
         p19(5);
         System.out.println("pattern 20");
         p20(5);
+        System.out.println("pattern 21");
+        p21(5);
+        System.out.println("pattern 22");
+        p22(5);
 
     }
 }
