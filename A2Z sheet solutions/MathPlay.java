@@ -17,6 +17,19 @@ public class MathPlay {
         int count = (int)(Math.log10(n) + 1);
         return count;
     }
+    public int reverse(int n) {
+        int num = Math.abs(n);
+        int rev = 0;
+        while (num != 0) {
+            int last = num % 10;
+            if (rev > (Integer.MAX_VALUE - last) / 10) {
+                return 0;
+            }
+            rev = (rev * 10) + last;
+            num = num / 10;
+        }
+        return (n < 0) ? (-rev) : rev;
+    }
 
     public static void main(String[] args) {
         int n = 12345;
