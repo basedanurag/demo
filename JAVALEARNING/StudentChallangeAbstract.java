@@ -29,6 +29,6 @@ public class StudentChallangeAbstract {
         s.area();
         s.parameter();
         s2.area();
-        s2.parameter();9
+        s2.parameter();
     }
 }
