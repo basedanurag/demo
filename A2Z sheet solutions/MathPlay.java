@@ -64,10 +64,24 @@ public class MathPlay {
       
         return  Gcd(Math.max(n1,n2)% Math.min(n1,n2), Math.min(n1,n2));
     }
+    public boolean ArmStrongNumber(int num){
+        int n = String.valueOf(num).length();
+        int og = num;
+        int ArmStrongNumber = 0;
+        while(num > 0){
+            int last = num %10;
+            ArmStrongNumber += Math.pow(last,n); 
+            num /= 10;
+        }
+        return (ArmStrongNumber == og);
+
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
         int n = sc.nextInt();
+        System.out.println("Enter the value of x");
 
         int x = sc.nextInt();
 
@@ -81,6 +95,7 @@ public class MathPlay {
         System.out.println(m.isPalindrome(n));
         System.out.println(m.isPalindrome2(x));
         System.out.println(m.Gcd(n, x));
+        System.out.println(n + "is a Arm strong number  " + m.ArmStrongNumber(n));
         sc.close();
         
     }
