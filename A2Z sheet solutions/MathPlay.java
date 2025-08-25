@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MathPlay {
     public boolean isPalindrome(int x) {
         String s = new String();
@@ -55,10 +57,19 @@ public class MathPlay {
         }
         return (n < 0) ? (-rev) : rev;
     }
+    public int Gcd(int n1, int n2){
+        if (n1 == 0)return n2;
+        
+        if (n2 == 0) return n1;
+      
+        return  Gcd(Math.max(n1,n2)% Math.min(n1,n2), Math.min(n1,n2));
+    }
 
     public static void main(String[] args) {
-        int n = 123454321;
-        int x = 1000000001;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int x = sc.nextInt();
 
         MathPlay m = new MathPlay();
         
@@ -69,6 +80,8 @@ public class MathPlay {
         System.out.println("Total digits (log method): " + m.countDigits2(n));
         System.out.println(m.isPalindrome(n));
         System.out.println(m.isPalindrome2(x));
+        System.out.println(m.Gcd(n, x));
+        sc.close();
         
     }
 }
