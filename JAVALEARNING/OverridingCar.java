@@ -11,6 +11,7 @@ class Car{
     
 }
 class LuxuryCar extends Car{
+    @Override
     public void changeGear(){
         System.out.println("Automatic car gear changed");
     }
