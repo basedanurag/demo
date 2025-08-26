@@ -15,7 +15,7 @@ class Student{
         return rollNO;
     }
 
-}
+}// this is the student challange for static and final 
 public class StudentChallangeStaticFinal{
     public static void main(String[] args) {
         Student s = new Student();
