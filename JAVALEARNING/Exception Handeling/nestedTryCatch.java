@@ -12,7 +12,7 @@ class NegativeIntegerException extends Exception{
         }
         return area;
     }
-}  
+}  //we can have as many catch block as we want 
 public class nestedTryCatch {
     public static int div(int a , int b){
         int c = 0;
