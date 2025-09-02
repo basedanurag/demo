@@ -129,7 +129,7 @@ public class MathPlay {
         System.out.println("Total digits (log method): " + m.countDigits2(n));
         System.out.println(m.isPalindrome(n));
         System.out.println(m.isPalindrome2(x));
-        System.out.println(m.Gcd(n, x));
+        System.out.println("the GCD is " +m.Gcd(n, x));
         System.out.println(n + "is a Arm strong number  " + m.ArmStrongNumber(n));
         ArrayList<Integer> divisors = allDivisior(n);
         System.out.println("is primenumber " + m.isPrime(n));
