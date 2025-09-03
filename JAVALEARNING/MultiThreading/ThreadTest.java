@@ -21,7 +21,7 @@ public class ThreadTest {
     public static void main(String[] args) {
         MyThread t= new MyThread("Anurag");
 
-        System.out.println("ID "+ t.getId());
+       /*  System.out.println("ID "+ t.getId());
         System.out.println("Name "+ t.getName());
         System.out.println("state "+ t.getState());
         t.start();
@@ -34,7 +34,10 @@ public class ThreadTest {
         t.stop();
         }catch (Exception e){
         System.out.println("state4 "+ t.getState() +e);
-        }
+        } */
+               // Daemon thread and join method
+        t.setDaemon(true);
+        t.start();
         
     }
 }
