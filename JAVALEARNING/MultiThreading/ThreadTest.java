@@ -25,9 +25,16 @@ public class ThreadTest {
         System.out.println("Name "+ t.getName());
         System.out.println("state "+ t.getState());
         t.start();
-        System.out.println("state2"+ t.getState());
+        System.out.println("state2 "+ t.getState());
         System.out.println("Priority"+ t.getPriority());
         System.out.println("Alive"+ t.isAlive());
+        t.interrupt();
+        System.out.println("state3 "+ t.getState());
+        try{
+        t.stop();
+        }catch (Exception e){
+        System.out.println("state4 "+ t.getState() +e);
+        }
         
     }
 }
