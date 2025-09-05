@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q3027 {
     class Solution {
     public int numberOfPairs(int[][] points) {
