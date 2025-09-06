@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class Q3025 {
     class Solution {
+    @SuppressWarnings("unused")
     public int numberOfPairs(int[][] points) {
         int n = points.length;
 

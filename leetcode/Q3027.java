@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class Q3027 {
     class Solution {
+    @SuppressWarnings("unused")
     public int numberOfPairs(int[][] points) {
         int n = points.length;
 
@@ -16,7 +17,6 @@ public class Q3027 {
         int result = 0;
 
         for (int i = 0; i < n; i++) {
-            int x1 = points[i][0];
             int y1 = points[i][1];   // upper left
 
             int bestY = Integer.MIN_VALUE;
