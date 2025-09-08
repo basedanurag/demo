@@ -1,39 +1,49 @@
 class ATM{
     synchronized public void checkBalance(String name){
-         System.out.println("user "+ name+" checking balance" );
+         System.out.println(name + " started checking balance at time: " + System.currentTimeMillis());
+         try{
+            Thread.sleep(1000);
+         }catch(InterruptedException e){
+            System.out.println("Operation interrupted: " + e.getMessage());
+         }
+         System.out.println(name + " finished checking balance at time: " + System.currentTimeMillis());
+    }
+    
+    synchronized public void withdraw(String name, int amount){
+        System.out.println(name + " started withdrawing Rs." + amount + " at time: " + System.currentTimeMillis());
+        try{
+            Thread.sleep(1000);
+         }catch(InterruptedException e){
+            System.out.println("Operation interrupted: " + e.getMessage());
+         }
+         System.out.println(name + " finished withdrawing Rs." + amount + " at time: " + System.currentTimeMillis());
+    }
+}
+class Customer extends Thread{
+    String name;
+    int amount;
+    ATM d;
+    public Customer(String name, int amt, ATM atm){
+        this.name = name;
+        this.amount = amt;
+        this.d = atm;
+    }
+    public void useATM(){
+        d.checkBalance(name);
+        d.withdraw(name, amount);
+        
+    }
+    public void run(){
+        useATM();
+    }
+}
 
-    }
-    synchronized public void withdraw(String name , int amount){
-        System.out.println("user "+ name+" withdrawing money" + " " +amount );
-    }
-}
-class Mythread1 extends Thread{
-    ATM d;
-    public Mythread1(ATM data){
-        this.d = data;
-    }
-    public void run(){
-        d.checkBalance("Anurag");
-        d.withdraw("Anurag", 9000);
-    }
-}
-class Mythread2 extends Thread{
-    ATM d;
-    public Mythread2(ATM data){
-        this.d = data;
-    }
-    public void run(){
-        d.checkBalance("manan");
-        d.withdraw("manan", 7000);
-    }
-} 
 public class StudentChallangesMultiThreading1 {
     public static void main(String[] args) {
         ATM d = new ATM();
-        Mythread1 t1 = new Mythread1(d);
-        Mythread2 t2 = new Mythread2(d);
-
-        t1.start();
-        t2.start();
+       Customer c1 = new Customer("Anurag", 90000, d);
+       Customer c2 = new Customer("manan", 987331, d);
+        c1.start();
+        c2.start();
     }
 }
