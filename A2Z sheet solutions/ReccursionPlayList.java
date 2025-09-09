@@ -66,6 +66,19 @@ public class ReccursionPlayList {
          reverseArray(arr, start + 1, end - 1);
       }
    }
+   static boolean palindrome(String s , int i){
+    int n = s.length();
+        if(i >= n/2){
+            return true;
+        }
+        if (s.charAt(i) != s.charAt(n - i - 1)){
+            return false;
+        }
+        
+        return   palindrome(s, i + 1);
+        
+   }
+   
 
 
 
@@ -92,6 +105,10 @@ public class ReccursionPlayList {
         int[] arr =  {1, 2, 3,5,6,7,3,5,7,7,5,4};
         reverseArray(arr, 0, n -1);
         printArray(arr, n);
+        System.out.println();
+
+        System.out.println(palindrome("madam", 0));
+        
 
 
 
