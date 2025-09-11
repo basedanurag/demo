@@ -1,3 +1,8 @@
+import java.util.Arrays;
+import java.util.BitSet;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Q1733 {
     class Solution {
     public int minimumTeachings(int n, int[][] L, int[][] F) {
