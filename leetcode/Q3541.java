@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Q3541 {
     class Solution {
     public int maxFreqSum(String s) {
