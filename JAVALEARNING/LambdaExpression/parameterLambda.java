@@ -14,8 +14,5 @@ public class parameterLambda {
         MyLambda m = (s) -> {System.out.println(s);}; // this is the lambda expression overriding 
         m.display("hello from lambda expression ");
         m1.display("hello from method overriding expression ");
-    }
-
-
-    
+    }  
 }
