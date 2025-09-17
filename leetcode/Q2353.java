@@ -1,3 +1,7 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeSet;
+
 public class Q2353 {
     class FoodRatings {
     // Map food with its rating.
