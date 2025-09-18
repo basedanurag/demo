@@ -1,5 +1,5 @@
 import java.io.*;
-public class JavaStreams {
+public class JavaFileOutputStreams {
     public static void main(String[] args) {
         try {
              FileOutputStream fos = new FileOutputStream("Test2.txt");
