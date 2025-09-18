@@ -1,6 +1,7 @@
-import java.util.HashMap;
+/*import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeSet;
+
 
 public class Q2353 {
     class FoodRatings {
@@ -51,7 +52,7 @@ public class Q2353 {
     public String highestRated(String cuisine) {
         Pair<Integer, String> highestRated = cuisineFoodMap.get(cuisine).first();
         // Return name of the highest rated 'food' of 'cuisine'.
-        return highestRated.getValue();
+        return highestRated.getValue(); 
     }
 }
-}
+}*/
