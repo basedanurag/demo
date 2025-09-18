@@ -16,7 +16,7 @@ public class javaFileReader {
             System.out.println(e);
         }
             */
-
+// when i want to read the file byte by byte
         try (FileReader fr = new FileReader("D:/demo/JAVALEARNING/java io Streams/Test2.txt")) {
             int x;
             while(( x = fr.read()) != -1){
