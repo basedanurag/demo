@@ -7,7 +7,8 @@ public class JavaFileOutputStreams {
                 byte b[] = str.getBytes();
 
              //   for(byte x : b)
-                    fos.write(b,5,str.length()-5);
+                  //  fos.write(b,5,str.length()-5);
+                  fos.write(b);
              
              fos.close();
         } catch (Exception e) {}
