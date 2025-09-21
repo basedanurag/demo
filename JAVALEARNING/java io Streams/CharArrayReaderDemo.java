@@ -1,6 +1,6 @@
 import java.io.CharArrayReader;
 
-public class CharArrayInputStreamDemo {
+public class CharArrayReaderDemo {
     // program for char array reader 
     public static void main(String[] args)throws Exception {
         char[] c = {'a','b', 'c', 'd'};
