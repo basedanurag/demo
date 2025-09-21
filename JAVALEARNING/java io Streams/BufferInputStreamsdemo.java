@@ -15,7 +15,9 @@ public class BufferInputStreamsdemo {
             System.out.print((char) x);
         }
         bis.close();*/
-        FileReader fr = new FileReader("Test2.txt");
+
+        // using reader class 
+        FileReader fr = new FileReader("Text2.txt");
         BufferedReader br = new BufferedReader(fr);
         
 
