@@ -46,6 +46,8 @@ public class BufferInputStreamsdemo {
       System.out.print((char)br.read());
       System.out.print((char)br.read());
 
+
+      System.out.println(br.readLine());
         br.close();
     }
 }
