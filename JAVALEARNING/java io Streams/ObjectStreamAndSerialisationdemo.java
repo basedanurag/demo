@@ -22,26 +22,26 @@ class Student implements Serializable {
         return "\n Student Details\n"+
                 "\n roll number :"+ rollnum+
                 "\n name :"+ name+
-                "\n department" + dept;
+                "\n department :" + dept;
     }
 }
 public class ObjectStreamAndSerialisationdemo {
  public static void main(String[] args) throws Exception { 
     /// code for writing the object in afile
     /// 
-    /*FileOutputStream fos  = new FileOutputStream("Student.txt");
+    FileOutputStream fos  = new FileOutputStream("Student.txt");
     ObjectOutputStream oop = new ObjectOutputStream(fos); 
 
-    Student s = new Student(10, "Anurag", "CSE");
+    Student s = new Student(11, "Anurag Srivastava", "CSE");
     oop.writeObject(s);
     oop.close();
     fos.close();
- */
+ 
      
     FileInputStream fis = new FileInputStream("Student.txt");
    ObjectInputStream ois = new ObjectInputStream(fis);
-    Student s = (Student)ois.readObject();
-    System.out.println(s);
+    Student s2 = (Student)ois.readObject();
+    System.out.println(s2);
    fis.close();
    ois.close();
 
