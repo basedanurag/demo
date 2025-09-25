@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Q120 {
     class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
