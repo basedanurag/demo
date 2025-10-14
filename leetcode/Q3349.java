@@ -1,3 +1,4 @@
+import java.util.List;
 public class Q3349 {
     class Solution {
     public boolean isIncreasing(List<Integer> nums, int start, int end){
