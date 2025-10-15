@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Q3350 {
     class Solution {
 
