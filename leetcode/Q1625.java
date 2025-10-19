@@ -1,3 +1,4 @@
+import java.util.*;
 public class Q1625 {
     class Solution {
     private String rotate(String s, int b) {
