@@ -1,5 +1,5 @@
 import java.util.LinkedHashMap;
-import java.util.Map;
+
 
 public class LinkedHMCacheDemo {
     public static void main(String[] args) {

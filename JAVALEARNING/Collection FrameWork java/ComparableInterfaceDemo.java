@@ -1,5 +1,5 @@
 import java.util.*;
-@SuppressWarnings("rawtypes")
+
 class Points implements Comparable{
     int x, y;
     public Points(int x, int y){
