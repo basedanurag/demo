@@ -3,11 +3,8 @@ import java.util.Map;
 
 public class LinkedHMCacheDemo {
     public static void main(String[] args) {
-        LinkedHashMap<Integer, String> lmp =  new LinkedHashMap<>(5, .75f,true){
-            protected boolean removeEldestEntry(Map.Entry e){
-                return size()>10;
-            }
-        };
+        LinkedHashMap<Integer, String> lmp =  new LinkedHashMap<>(5, .75f,true);
+        
         lmp.put(1,"Anurag");
         lmp.put(2,"Nishant");
         lmp.put(3,"neelam" );
