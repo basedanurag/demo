@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>My name is Anurag Srivasytava and this is my laptop of Lenov brand</comment>
+<entry key="1">Hello</entry>
+<entry key="2">How</entry>
+<entry key="3">are</entry>
+<entry key="4">you</entry>
+</properties>
