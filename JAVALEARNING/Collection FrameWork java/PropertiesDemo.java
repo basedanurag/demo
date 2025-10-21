@@ -1,6 +1,4 @@
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-
 import java.util.Properties;
 
 public class PropertiesDemo {
