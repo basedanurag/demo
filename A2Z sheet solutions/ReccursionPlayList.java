@@ -11,7 +11,6 @@ public class ReccursionPlayList {
    
 
     public static void main(String[] args){
-        ReccursionPlayList r = new ReccursionPlayList();
         Scanner sc = new Scanner(System.in);
         System.out.println("hello");
         int  n;
