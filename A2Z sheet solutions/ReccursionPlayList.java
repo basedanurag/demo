@@ -43,10 +43,15 @@ public class ReccursionPlayList {
 
         return;
         }
-
-        Sum(i - 1, sum + i);
-
-       
+        Sum(i - 1, sum + i); 
+    }
+    // factorial number using recursion
+    public static int factorial(int n){
+        
+        if (n == 1 || n == 0){
+            return 1;
+        }
+         return n * factorial(n - 1);
     }
 
     public static void main(String[] args){
@@ -68,8 +73,11 @@ public class ReccursionPlayList {
         System.out.println("\noutput for printing N -> 1 (linearly) using reccursion backtracking");
         pintNumber3(1,n);
 
-        System.out.println("\n output fot Sum of N number");
-      Sum(n, 0);
+        System.out.println("\noutput fot Sum of N number");
+        Sum(n, 0);
+        
+        System.out.println("\noutput fot Factorial of N number");
+        System.out.println(factorial(n));
 
         sc.close();
     }
