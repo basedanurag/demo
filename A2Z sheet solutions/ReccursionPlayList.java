@@ -72,14 +72,24 @@ public class ReccursionPlayList {
             System.out.print(x+ " ");
         }
     }
+    public static boolean palindromeString(int i , String s){
+        if (i > s.length()/2) return true;
+        if (s.charAt(i) != s.charAt(s.length()- i - 1)) return false;
+
+        return palindromeString(i+ 1, s);
+
+
+    }
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("hello");
         int  n;
+        String s;
         System.out.println("enter n"); 
         n = sc.nextInt();
-
+        System.out.println("enter the string");
+        s = sc.next();
         System.out.println("\noutput for printing name N times");
         printName(n);
 
@@ -98,10 +108,20 @@ public class ReccursionPlayList {
         System.out.println("\noutput fot Factorial of N number");
         System.out.println(factorial(n));
 
+        //reversing array question
         int arr[] = { 5, 4, 3, 2, 1};
+        System.out.println("\nArray before reversal");
+        printArr(arr);
         ReverseArray(arr, 0, arr.length- 1);
         System.out.println("\nthe reverse array is ");
         printArr(arr);
+
+        System.out.println("\nchecking weather a string is palindrome or not");
+        
+        System.out.println(palindromeString(0, s));
+
+
         sc.close();
+
     }
 }
