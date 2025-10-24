@@ -11,12 +11,32 @@ public class ReccursionPlayList {
     }
 
     //recursive method for printing 1 -> n linearly
-    public static void pintNumber(int i, int n){
+    public static void pintNumber1(int i, int n){
         if(i > n)
         return;
         System.out.print(i +" "); 
-        pintNumber(i + 1, n);
+        pintNumber1(i + 1, n);
     }
+
+     //recursive method for printing N -> 1 linearly
+    public static void pintNumber2(int i){
+        if(i < 1)
+        return;
+        System.out.print(i +" "); 
+        pintNumber2(i - 1);
+    }
+
+    //recursive method for printing N -> 1 linearly using BackTracking
+    public static void pintNumber3(int i, int n){
+        if(i > n)
+        return;
+        
+        pintNumber3(i + 1,n);
+
+        System.out.print(i+" ");
+    }
+    //sum of N numbers using recursion
+
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -25,12 +45,17 @@ public class ReccursionPlayList {
         System.out.println("enter n"); 
         n = sc.nextInt();
 
-        System.out.println("output for printing name N times");
+        System.out.println("\noutput for printing name N times");
         printName(n);
 
-        System.out.println("output for printing 1 -> N (linearly) using reccursion");
-        pintNumber(1, n);
+        System.out.println("\noutput for printing 1 -> N (linearly) using reccursion");
+        pintNumber1(1, n);
     
+        System.out.println("\noutput for printing N -> 1 (linearly) using reccursion");
+        pintNumber2(n);
+
+        System.out.println("\noutput for printing N -> 1 (linearly) using reccursion backtracking");
+        pintNumber3(1,n);
 
 
 
