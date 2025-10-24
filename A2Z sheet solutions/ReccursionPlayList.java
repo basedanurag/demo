@@ -36,7 +36,18 @@ public class ReccursionPlayList {
         System.out.print(i+" ");
     }
     //sum of N numbers using recursion
+    public static void Sum(int i, int sum){
+       
+        if (i < 1){
+        System.out.print(sum);
 
+        return;
+        }
+
+        Sum(i - 1, sum + i);
+
+       
+    }
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -57,7 +68,8 @@ public class ReccursionPlayList {
         System.out.println("\noutput for printing N -> 1 (linearly) using reccursion backtracking");
         pintNumber3(1,n);
 
-
+        System.out.println("\n output fot Sum of N number");
+      Sum(n, 0);
 
         sc.close();
     }
