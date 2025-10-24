@@ -53,6 +53,25 @@ public class ReccursionPlayList {
         }
          return n * factorial(n - 1);
     }
+    //method for swaping
+    public static void swap(int[] arr,int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    //Reverse an array using recursion( two pointer)
+    public static void ReverseArray(int[] arr, int start, int end){
+        if(start>=end)
+        return;
+        swap( arr,start, end);
+        ReverseArray(arr, start + 1, end - 1);
+       
+    }//method for printing an array
+    public static void printArr(int[] arr){
+         for(int x: arr){
+            System.out.print(x+ " ");
+        }
+    }
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -79,6 +98,10 @@ public class ReccursionPlayList {
         System.out.println("\noutput fot Factorial of N number");
         System.out.println(factorial(n));
 
+        int arr[] = { 5, 4, 3, 2, 1};
+        ReverseArray(arr, 0, arr.length- 1);
+        System.out.println("\nthe reverse array is ");
+        printArr(arr);
         sc.close();
     }
 }
