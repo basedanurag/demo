@@ -1,0 +1,3 @@
+name=anurag
+class=5CSEA
+Course=Btech
