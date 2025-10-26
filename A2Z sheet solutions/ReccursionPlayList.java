@@ -80,7 +80,17 @@ public class ReccursionPlayList {
 
 
     }
+    // multiple recursion call wala method practice kar rha hu 
+    public static int fibbonaci(int n ){
+        if ( n <= 1)
+        return n;
 
+        
+        int last = fibbonaci( n - 1);
+        int secondlast = fibbonaci(n - 2);
+
+        return last + secondlast;
+    }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("hello");
@@ -120,7 +130,12 @@ public class ReccursionPlayList {
         
         System.out.println(palindromeString(0, s));
 
+        // printing the fibbonaci series using multiple recursion calls 
+        for(int i= 0; i <=n; i++){
 
+        System.out.print(fibbonaci(i)+ " ");
+        }
+       
         sc.close();
 
     }
