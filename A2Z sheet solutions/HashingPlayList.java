@@ -41,10 +41,32 @@ public class HashingPlayList {
     // }
 */
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         // character hashing 
         //  AS it uses ascii values we can use several methods to count the frequenecy 
         //1st is if the string has only lower case ex = a,b,c,d....z use hash[s.charAt(i)] = ch - 'a';
         //2nd if the string has only upper case ex =A,B,C,D...Z use hash[s.charA(i)]= ch - 'A';
         //3rd if it contains all of them then just like array use hash od size 256 in others use 26 and count like this hash[s.charAt(i)]++;
+
+        String string = "adjwdijdadasdasdadad";
+
+        //pre  computing
+        System.out.println("pre computing starts...");
+        int hash[]= new int[26];
+        for (int i = 0; i < hash.length; i++) {
+             for(char s: string.toCharArray() ){
+            hash[string.charAt(i)] = s - 'a'; 
+        }
+        System.out.println("fetching start here ");
+        int query = sc.nextInt();
+            while(query-- !=0){
+            
+        //fetching
+            for(int i = 0; i < hash.length; i++ ){
+            System.out.println(hash[string.charAt(i)]);
+        }
+        }
+        }
+       sc.close();
     }
 }
