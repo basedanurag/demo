@@ -14,7 +14,9 @@ public class CountFrequency {
         // pre computing of the arrray 
         HashMap<Integer,Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
+             System.out.println("enter "+i+"th number");
             arr[i] = sc.nextInt();
+           
             int key = arr[i];
             int freq =0;
             if(map.containsKey(key)) freq = map.get(key);
@@ -23,6 +25,7 @@ public class CountFrequency {
            map.put(key,freq);
         }
         System.out.println("Fetching process starts here ");
+        System.out.println("enter number of query");
         int q = sc.nextInt();
 
         while(q-- > 0){
