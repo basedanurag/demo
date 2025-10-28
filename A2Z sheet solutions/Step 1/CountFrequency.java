@@ -32,7 +32,7 @@ public class CountFrequency {
             System.out.println("enter number to fetch detail");
             int number = sc.nextInt();
             if(map.containsKey(number)) 
-            System.out.println( "the frequency of "+number+"is "+map.get(number));
+            System.out.println( "the frequency of "+number+" is "+map.get(number));
 
         }
         sc.close();
