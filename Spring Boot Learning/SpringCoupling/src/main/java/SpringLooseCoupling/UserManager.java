@@ -1,8 +1,14 @@
-package SpringTightCoupling;
+package SpringLooseCoupling;
 
-public class UserManager {
-    UserDatabase object = new UserDatabase();
-        public String getData(){
-            return object.getUserData();
-        }
+import SpringTightCoupling.UserDatabase;
+
+public class UserManager  {
+    UserDataProvider udp;
+    public UserManager(UserDataProvider udp) {
+        this.udp = udp;
+    }
+
+    public String getUserData() {
+        return udp.getData();
+    }
 }

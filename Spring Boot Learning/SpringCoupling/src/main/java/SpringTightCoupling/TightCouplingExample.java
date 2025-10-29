@@ -1,5 +1,10 @@
 package SpringTightCoupling;
 
-public class Connector {
-    
+public class TightCouplingExample {
+
+
+    public static void main(String[] args) {
+        UserManager um = new UserManager();
+        System.out.println(um.getData());
+    }
 }

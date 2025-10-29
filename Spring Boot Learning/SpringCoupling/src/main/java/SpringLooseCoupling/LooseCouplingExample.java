@@ -1,10 +1,15 @@
-package SpringTightCoupling;
+package SpringLooseCoupling;
 
-public class TightCouplingExample {
+public class LooseCouplingExample {
 
 
     public static void main(String[] args) {
-        UserManager um = new UserManager();
-        System.out.println(um.getData());
+        UserDataProvider udp = new UserDatabase();
+        UserManager um = new UserManager(udp);
+        System.out.println(um.getUserData());
+
+        UserDataProvider udp2 = new WebDataprovider();
+        UserManager um2 = new UserManager(udp2);
+        System.out.println(um2.getUserData());
     }
 }
