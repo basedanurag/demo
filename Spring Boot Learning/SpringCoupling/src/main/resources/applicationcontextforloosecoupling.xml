@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="webData" class="SpringLooseCoupling.WebDataprovider" >
+        <property name="msg" value ="Fetching data from webservice"/>
+    </bean>
+    <bean id="userData" class="SpringLooseCoupling.UserDatabase" >
+        <property name="datamsg" value="Fetching data from user database"
+    </bean>
+    <bean id="userManager" class="SpringLooseCoupling.UserManager" >
+        <constructor-arg ref="webData"/>
+
+    </bean>
+</beans>
