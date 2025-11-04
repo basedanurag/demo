@@ -3,7 +3,9 @@ package Com.example.ConstructorInjection;
 public class Car {
     private Specifications specifications;
 
-    public Car(Specifications specifications) {
+
+
+    public void setSpecifications(Specifications specifications) {
         this.specifications = specifications;
     }
 
