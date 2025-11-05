@@ -5,14 +5,18 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="webData" class="SpringLooseCoupling.WebDataprovider" >
+    <bean id="webDataprovider" class="SpringLooseCoupling.WebDataprovider" >
         <property name="msg" value ="Fetching data from webservice"/>
     </bean>
-    <bean id="userData" class="SpringLooseCoupling.UserDatabase" >
-        <property name="datamsg" value="Fetching data from user database"
+    <bean id="userDatabase" class="SpringLooseCoupling.UserDatabase" >
+        <property name="datamsg" value="Fetching data from user database"/>
     </bean>
-    <bean id="userManager" class="SpringLooseCoupling.UserManager" >
-        <constructor-arg ref="webData"/>
 
+    <bean id="userData" class="SpringLooseCoupling.UserManager" >
+        <constructor-arg ref="userDatabase"/>
     </bean>
+    <bean id="webData" class="SpringLooseCoupling.UserManager" >
+        <constructor-arg ref="webDataprovider"/>
+    </bean>
+
 </beans>
