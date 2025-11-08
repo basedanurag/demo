@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// ujoihuyfy
 public class QuickSortPractice {
     //method to swap the elements
     public static void Swap(int[] arr, int i, int j){
