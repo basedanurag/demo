@@ -1,4 +1,4 @@
-package Com.example.autowire.name;
+package Com.example.autowire.type;
 
 public class Specifications {
     private String model;
