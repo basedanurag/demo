@@ -1,4 +1,5 @@
 public class ArrayRotationDemo {
+    // left rotation by 1 place
     public static void bruteforceRotaation(int[] arr){
         int n  = arr.length;
         int temp[] = new int[n];
@@ -22,9 +23,28 @@ public class ArrayRotationDemo {
             System.out.print(i +" ");
         }
     }
+    // left rotation by D places 
+    public static void bruteforceRotation(int[]arr, int a){
+        int n  =  arr.length;
+        a = a%n;
+        int[] temp = new int[a];  
+        for(int i = 0; i < a; i++){
+            temp[i] = arr[i];
+        } 
+        for(int i = 0; i < n - a; i++){
+            arr[i] = arr[i+ a];
+        }
+        for(int i = n - a; i < n; i++){
+            arr[i] = temp[i- (n -a)];
+        }
+        for (int x : arr)
+        System.out.print(x +" ");
+    }
+
     public static void main(String[] args) {
             int[] arr = {3,1,31,4,5,6};
             //bruteforceRotaation(arr);
-            optimalRotation(arr);
+           // optimalRotation(arr);
+           bruteforceRotation(arr, 1);
     }
 }
