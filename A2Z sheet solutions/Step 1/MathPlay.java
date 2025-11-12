@@ -61,7 +61,7 @@ public class MathPlay {
         }
         return (n < 0) ? (-rev) : rev;
     }
-
+    //equilidion algo
     public int Gcd(int n1, int n2) {
         if (n1 == 0)
             return n2;
