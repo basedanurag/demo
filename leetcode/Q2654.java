@@ -32,7 +32,7 @@ public class Q2654 {
 
         return minStepsTo1 + (n - 1);
     }
-
+    // gcd function
     private int gcd(int a, int b) {
         while (b != 0) {
             int temp = a % b;
