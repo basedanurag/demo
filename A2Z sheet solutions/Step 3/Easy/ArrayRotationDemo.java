@@ -28,23 +28,34 @@ public class ArrayRotationDemo {
         int n  =  arr.length;
         a = a%n;
         int[] temp = new int[a];  
+        //copying a temporary array which need to be rotated
         for(int i = 0; i < a; i++){
             temp[i] = arr[i];
         } 
+        //actual left rotation
         for(int i = 0; i < n - a; i++){
             arr[i] = arr[i+ a];
         }
+        //inserting the 1st elements in the last
         for(int i = n - a; i < n; i++){
             arr[i] = temp[i- (n -a)];
         }
+        // printing the array
         for (int x : arr)
         System.out.print(x +" ");
+    }
+    //right rotation by d places 
+    public static void rightrotationbrute(int[]arr, int d){
+        int n  =  arr.length;
+        d = d % n;
+
+        
     }
 
     public static void main(String[] args) {
             int[] arr = {3,1,31,4,5,6};
             //bruteforceRotaation(arr);
            // optimalRotation(arr);
-           bruteforceRotation(arr, 1);
+           bruteforceRotation(arr, 4);
     }
 }
