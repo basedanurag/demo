@@ -48,7 +48,22 @@ public class ArrayRotationDemo {
     public static void rightrotationbrute(int[]arr, int d){
         int n  =  arr.length;
         d = d % n;
-
+        int temp[] = new int[d];
+        //copying a temporary array which need to be rotated
+        for(int i = 0; i < d; i++){
+            temp[i] = arr[n - d + i];
+        } 
+          //actual right rotation
+        for(int i = n - d - 1; i >= 0; i--){
+            arr[i+d] = arr[i];
+        }
+        //inserting the last elements in the first
+        for(int i = 0; i <d; i++){
+            arr[i] = temp[i];
+        }
+        // printing the array
+        for (int x : arr)
+        System.out.print(x +" ");
         
     }
 
@@ -56,6 +71,8 @@ public class ArrayRotationDemo {
             int[] arr = {3,1,31,4,5,6};
             //bruteforceRotaation(arr);
            // optimalRotation(arr);
-           bruteforceRotation(arr, 4);
+         //  bruteforceRotation(arr, 4);
+         rightrotationbrute(arr, 1);
+
     }
 }
