@@ -1,12 +1,8 @@
-package Com.example.component.annotations;
+package Com.example.componentscan;
 
 import org.springframework.context.annotation.ComponentScan;
-
+import org.springframework.context.annotation.Configuration;
+@Configuration
+@ComponentScan(basePackages = "Com.example.componentscan")
 public class AppConfig {
-    Employee employee;
-    @ComponentScan("Com.example.component.annotations")
-    public AppConfig(Employee employee) {
-        this.employee = employee;
-    }
-
 }

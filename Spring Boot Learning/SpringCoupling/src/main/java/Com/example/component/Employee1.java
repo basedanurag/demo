@@ -1,11 +1,11 @@
-package Com.example.componentscan;
+package Com.example.component;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 
-@Component("employee")
-public class Employee {
+@Component("employee1")
+public class Employee1 {
     @Value("#{1}")
     private int EmployeeId;
     @Value("Anurag ")
