@@ -21,6 +21,9 @@ public class MoveZeroToEnd {
             System.out.print(i +" ");
         }
     }
+    public static void optimalapproach(int []arr){
+        
+    }
     public static void main(String[] args) {
         int[] arr = {0,1,0,0,5,6};
         bruteforce(arr);
