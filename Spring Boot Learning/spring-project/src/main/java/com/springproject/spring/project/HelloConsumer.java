@@ -2,7 +2,7 @@ package com.springproject.spring.project;
 
 public class HelloConsumer {
     private String message;
-
+    //Constructor for API
     public HelloConsumer(String message) {
         this.message = message;
     }
