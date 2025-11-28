@@ -1,27 +1,29 @@
-package com.example.EcomWebsite.Ecomercewebsite.model;
+package com.example.ecomwebsite.model;
 
 public class Category {
     private  Long CategoryID;
     private  String CategoryName;
 
+    public Category(Long CategoryID, String CategoryName) {
+        this.CategoryID = CategoryID;
+        this.CategoryName = CategoryName;
+    }
+
     public Long getCategoryID() {
         return CategoryID;
     }
 
-    public Category(Long categoryID, String categoryName) {
-        this.CategoryID = categoryID;
-        this.CategoryName = categoryName;
-    }
 
-    public void setCategoryID(Long categoryID) {
-        CategoryID = categoryID;
+
+    public void setCategoryID(Long CategoryID) {
+        this.CategoryID = CategoryID;
     }
 
     public String getCategoryName() {
         return CategoryName;
     }
 
-    public void setCategoryName(String categoryName) {
-        CategoryName = categoryName;
+    public void setCategoryName(String CategoryName) {
+        this.CategoryName = CategoryName;
     }
 }
