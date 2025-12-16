@@ -96,6 +96,7 @@ public class Q3562 {
         int budget
     ) {
         // Build adjacency list
+        @SuppressWarnings("unchecked")
         List<Integer>[] adj = new ArrayList[n];
         for (int i = 0; i < n; i++) adj[i] = new ArrayList<>();
 
