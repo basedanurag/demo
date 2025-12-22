@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Q955 {
     class Solution {
     public int minDeletionSize(String[] A) {
