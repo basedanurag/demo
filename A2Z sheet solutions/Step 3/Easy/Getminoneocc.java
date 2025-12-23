@@ -38,8 +38,15 @@ public class Getminoneocc {
         }
         return -1;
     }
+    public static int approach3(int[] arr){
+        int result = 0;
+        for (int i : arr) {
+            result ^= i;
+        }
+        return result;
+    }
     public static void main(String[] args) {
 int[] arr ={7, 3, 3, 4, 4, 5, 5};
-       System.out.println( approach2(arr));
+       System.out.println( approach3(arr));
     }
 }
