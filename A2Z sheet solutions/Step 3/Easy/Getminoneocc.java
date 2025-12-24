@@ -48,5 +48,9 @@ public class Getminoneocc {
     public static void main(String[] args) {
 int[] arr ={7, 3, 3, 4, 4, 5, 5};
        System.out.println( approach3(arr));
+              System.out.println( approach2(arr));
+
+                     System.out.println( approach1(arr));
+
     }
 }
