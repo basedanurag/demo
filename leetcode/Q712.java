@@ -5,6 +5,7 @@ class Solution {
         int[][] dp =  new int[n + 1][m + 1];
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
+                /// LCS algo hai ye least common search 
                 if(s1.charAt(i) == s2.charAt(j)){
                     dp[i + 1][j + 1] =  dp[i][j] + s1.charAt(i);
                     
