@@ -85,7 +85,7 @@ public class UnionArray {
     public static void main(String[] args) {
         int[] arr    = {3,1,31,4,5,6};
         int[] arr2   = {1,2,3,4,5,6};
-        //solution1(arr, arr2);
-        solution3(arr, arr2);
+        solution1(arr, arr2);
+       // solution3(arr, arr2);
     }
 }
