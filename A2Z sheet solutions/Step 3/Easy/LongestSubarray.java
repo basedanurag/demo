@@ -1,6 +1,26 @@
 import java.util.HashMap;
 
 public class LongestSubarray {
+    public static int subArrayOptimal(int[] arr, int n){
+        // this will use the 2 pointer approach or we can say sliding window approach hai
+        int left  =  0;
+        int right = left;
+        int len  = 0;
+        int sum = 0;
+        while( right < arr.length){
+            sum += arr[right];
+            
+            while(sum >= n){
+                if(sum == n ){
+                len  =  Math.max(len, right - left + 1);
+                }
+                sum -= arr[left];
+                left++;
+            }
+            right++;
+        }
+         return len;
+    }
     public static int subArrayBetter(int[] arr, int n){
        HashMap< Integer, Integer> presum =  new HashMap<>();
        int sum = 0;
@@ -51,7 +71,7 @@ public class LongestSubarray {
 
     public static void main(String[] args) {
          int[] arr = {1,2,1,1,5,6};
-         subArray(arr, 3);
+         subArray(arr, 3); 
          subArrayBetter(arr, 3); // works on negative integers 
     }
 }
