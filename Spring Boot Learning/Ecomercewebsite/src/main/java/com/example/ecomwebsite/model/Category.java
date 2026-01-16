@@ -3,7 +3,7 @@ package com.example.ecomwebsite.model;
 public class Category {
     private  Long CategoryID;
     private  String CategoryName;
-
+    //constrcutor for category
     public Category(Long CategoryID, String CategoryName) {
         this.CategoryID = CategoryID;
         this.CategoryName = CategoryName;

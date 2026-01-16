@@ -19,6 +19,7 @@ public class CategoryServiceimpl implements CategoryService{
         category.setCategoryID(nextId++);
         categoryList.add(category);
     }
+    // delete category
     public String removeCategory(Long categoryID) {
         Category category = categoryList.stream()
                 .filter(C-> C.getCategoryID().equals(categoryID))

@@ -10,15 +10,18 @@ import java.util.*;
 @RestController
 public class CategoryController {
     private CategoryService categoryService;
-
+    // constructor for controller
     public CategoryController(CategoryService categoryService) {
+
         this.categoryService = categoryService;
     }
 
     @GetMapping("/api/public/categories")
     public List<Category> getAllCategoryList() {
+
         return categoryService.getAllCategoryList();
     }
+
     @PostMapping("/api/public/categories")
     public String addCategory(@RequestBody Category category) {
         categoryService.addCategory(category);
