@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum{
@@ -27,8 +28,10 @@ public class TwoSum{
         return "NO";
     }
     public static String TwoSumOptimal(int[] arr, int n){
+        Arrays.sort(arr);
        int i = arr[0];
        int j =  arr[arr.length - 1];
+       
        while (i < arr.length - 1){
             int num1 =  i;
             while(j >= 0){
