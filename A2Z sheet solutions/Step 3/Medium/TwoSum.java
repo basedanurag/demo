@@ -5,14 +5,14 @@ public class TwoSum{
     public static String TwoSumBrute(int[] arr, int n){
         // this is the most basic version of 2 pointer two sum TC (ON^2) and space is O(1)
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i+1; j < arr.length - 1; j++) {
+            for (int j = i+1; j < arr.length ; j++) {
                 if(n - arr[j] == arr[i]){
                     return "yes";
                 }
             }
         }
 
-        return null;
+        return "NO";
     }
     public static String TwoSumBetter(int[] arr, int n){
         HashMap<Integer, Integer> hmp  = new HashMap<>();
@@ -29,13 +29,13 @@ public class TwoSum{
     }
     public static String TwoSumOptimal(int[] arr, int n){
         Arrays.sort(arr);
-       int i = arr[0];
-       int j =  arr[arr.length - 1];
+       int i = 0;
+       int j = arr.length - 1;
        
        while (i < arr.length - 1){
-            int num1 =  i;
+            int num1 =  arr[i];
             while(j >= 0){
-                int num2 = j;
+                int num2 = arr[j];
 
                 if(num1 + num2 == n ){
                     return "Yes";
@@ -49,8 +49,11 @@ public class TwoSum{
         return "No";
     }
     public static void main(String[] args) {
-        int[] arr = {2, 7, 11, 15};
-        int n = 9;
+        // int[] arr = {2, 7, 11, 15};
+        // int n = 9;
+        int[] arr = {-1, -2, -3, -4, -5};
+        int n = -8;
+
       System.out.println( "Solution of Brute force approach "+ TwoSumBrute(arr, n));
        System.out.println( "Solution of Better approach "+TwoSumBetter(arr, n));
        System.out.println( "Solution of optimal approach " +TwoSumOptimal(arr, n));
