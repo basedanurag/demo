@@ -33,7 +33,7 @@ public class Q3 {
         }
         return -1;
     }
-    // Moores voting algorithms
+    // Moores voting algorithms TC O(N) and space C O(1)
     public static int MajorityElementOptimal(int[] arr){
         int element = 0;
         int count = 0;
