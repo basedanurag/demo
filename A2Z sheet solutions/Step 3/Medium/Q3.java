@@ -33,10 +33,40 @@ public class Q3 {
         }
         return -1;
     }
+    // Moores voting algorithms
+    public static int MajorityElementOptimal(int[] arr){
+        int element = 0;
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(count == 0){
+                element = arr[i];
+                count+=1;
+            }
+            else if( arr[i]== element){
+                count++;
+            }else {
+                count--;
+            }
+        }
+        int count1 =0;
+        for (int i = 0; i < arr.length; i++) {
+            if(element == arr[i]){
+                count1++;
+            }
+            if(count1 > (arr.length /2)){
+                return element;
+            }
+        }
+        
+        
+        return -1;
+    }
     public static void main(String[] args) {
-                int[] arr = {2, 1, 1, 1, 1, 2, 2};
+                int[] arr = {2, 1, 1, 1, 1, 2, 2,3,3,3,3,3,3,3,3,3};
                System.out.println("Answer is "+ MajorityElementBrute(arr));
                System.out.println("the ans is "+ MajorityElementBetter(arr));
+               //moore voting algorithm
+               System.out.println("the soln of most optimal solution is " + MajorityElementOptimal(arr));
 
     }
 }
