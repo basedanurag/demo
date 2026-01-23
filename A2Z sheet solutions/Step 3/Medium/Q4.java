@@ -39,6 +39,24 @@ public class Q4 {
         }
         return MaxSum;
     }
+    public static int KadanesAlgorithm(int [] arr){
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+
+            
+            max = Math.max(max, sum);
+
+            if(sum < 0){
+                sum = 0;
+            }
+        }
+
+
+        return max;
+    }
     public static void main(String[] args) {
          
         int [] arr = {2, 3, 5, -2, 7, -4};
@@ -46,5 +64,6 @@ public class Q4 {
         System.out.println(MaxSum(nums));
         System.out.println(betterApproach(arr));
         System.out.println(MaxSum(arr));
+        System.out.println(KadanesAlgorithm(nums));
     }
 }
