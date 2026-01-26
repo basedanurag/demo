@@ -56,6 +56,7 @@ public class Q6 {
         
       //  System.out.println(solve(arr));
          System.out.println(optimalDP(arr));
+         br.close();
     }
 
     static int solve(int[] arr) {
