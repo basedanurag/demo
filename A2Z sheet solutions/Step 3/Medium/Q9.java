@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Q9 {
-    public static void bruteForce(int [] arr){
+    public static void bruteForce(int [] arr){ //Tc  =  O(n^2) sc = O(n)
       
         List<Integer> res = new ArrayList<>();
         
@@ -25,7 +25,7 @@ public class Q9 {
         }
 
     }
-    public static void optimalSol(int[] arr){
+    public static void optimalSol(int[] arr){ // Tc  =  O(n) sc = O(n)
     
         ArrayList<Integer> res = new ArrayList<>();
         int n = arr.length;
