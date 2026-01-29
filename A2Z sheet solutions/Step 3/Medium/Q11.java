@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Q11 {
     // set matrix 2D array 
     public static void printArr(boolean arr[]){
