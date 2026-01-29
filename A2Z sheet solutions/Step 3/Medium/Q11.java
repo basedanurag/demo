@@ -9,6 +9,7 @@ public class Q11 {
         }
     }
     public static void setZeroes(int[][] matrix) {
+        //TC : O((m * n)* (m + n)*(m * n)) ~ O(N^3)
         int m = matrix.length;
         int n = matrix[0].length;
         for (int i = 0; i < m; i++) {
