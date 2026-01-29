@@ -75,11 +75,49 @@ public class Q11 {
         printArr(row);
         printArr(col);
     }
+    public static void optimalSol(int[][] matrix){
+        int m =  matrix.length;
+        int n = matrix[0].length;
+        int col0 = 1;
+        //  boolean [] row  = new boolean[m]; ---> matrix[..][0];
+        //  boolean [] col =  new boolean[n]; ---> matrix[0][..];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                    // mark the ith row 
+                if(matrix[i][j] == 0){
+                    matrix[i][0] = 0;
+                    // mark the jth col
+                    if(j != 0){
+                    matrix[0][j] = 0;
+                    }
+                    else{
+                    col0 = 0;
+                    }
+                }
+            }
+        }
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                if(matrix[i][j] != 0 ){
+                    //check the mark of row and col
+                    if(matrix[i][0] == 0|| matrix[0][j] == 0){
+                        matrix[i][j] = 0;
+                    }
+                    else if(col0 == 0){
+                    matrix[0][0] = 0;
+                    }
+                }
+            }
+        }
+        printMat(matrix);
+    }
+    
 
     public static void main(String[] args) {
         int matrix[][] = {{1,1,1},{1,0,1},{1,1,1}};
        // setZeroes(matrix);
         System.out.println();
-        betterApproach(matrix);
+       // betterApproach(matrix);
+        optimalSol(matrix);
     }
 }
