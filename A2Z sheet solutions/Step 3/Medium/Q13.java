@@ -6,9 +6,9 @@ public class Q13 {
         int n = matrix[0].length;
         List<Integer> ans = new ArrayList<>();
         int top = 0;
-        int bottom = n - 1;
+        int bottom = m - 1;
         int left = 0;
-        int right = m - 1;
+        int right = n- 1;
         while (top <= bottom && left <= right) {
             // left to right
             for (int i = left; i <= right; i++) {
