@@ -21,7 +21,8 @@ public class LongestSubarray {
         }
          return len;
     }
-    public static int subArrayBetter(int[] arr, int n){
+    public static int subArrayBetter(int[] arr, int n){ 
+        // prefix sum 
        HashMap< Integer, Integer> presum =  new HashMap<>();
        int sum = 0;
        int len = 0;
