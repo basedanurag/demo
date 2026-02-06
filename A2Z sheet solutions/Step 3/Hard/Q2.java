@@ -15,6 +15,7 @@ public class Q2 {
         return ans;
     }
      public static  List<Integer> majorityElement(int[] arr) {
+        // extended moore voting algorithm for N/3 
         List<Integer> ans = new ArrayList<>();
         int n  = arr.length;
         int element1 = 0;
