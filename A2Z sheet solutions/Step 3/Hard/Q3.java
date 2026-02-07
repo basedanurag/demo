@@ -27,7 +27,6 @@ public class Q3 {
     }
     public static List<List<Integer>> better(int[] arr){
         Set<List<Integer>> set = new HashSet<>();
-        int n = arr.length;
         for (int i = 0; i < arr.length; i++) {
             Set<Integer> set2 = new HashSet<>();
             for (int j = i + 1; j < arr.length; j++) {
