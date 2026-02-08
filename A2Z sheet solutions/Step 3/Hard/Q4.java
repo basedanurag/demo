@@ -49,37 +49,39 @@ public class Q4 {
         return new ArrayList<>(set);
     }
     public static List<List<Integer>> optimalApproach(int[]arr, int target){
-        int n = arr.length;
+      int n = arr.length;
+        List<List<Integer>> ans = new ArrayList<>();
+
+        // Step 1: Sort array
         Arrays.sort(arr);
-        int left  = 0;
-        int right = n - 1;
-        List<List<Integer>> ans  = new ArrayList<>();
-        
-        for (int i = 0; i < arr.length; i++) {
-            left = i + 1;
-            if(i > 0 && arr[i] == arr[i - 1]){
-                continue;
-            }
-            while(left < right){
-                int mid = (left + right)/2;
-                int sum = arr[i] + arr[left] +arr[mid]+ arr[right];
 
+        // Step 2: First loop for first number
+        for (int i = 0; i < n; i++) {
+            if (i > 0 && arr[i] == arr[i - 1]) continue;
 
-                if ( sum > 0){
-                    right--;
-                }else if(sum < 0){
-                    left++;
-                    mid++; 
-                }else if(sum == target){
-                    List<Integer> temp =  Arrays.asList(arr[i], arr[left], arr[mid], arr[right]);
-                    ans.add(temp);
-                    left++;
-                    mid++;
-                    right--;
-                    while(left < right && arr[left] == arr[left - 1]) left++;
-                    while(left < right && arr[right] == arr[right + 1]) right--;
+            // Step 3: Second loop for second number
+            for (int j = i + 1; j < n; j++) {
+                if (j > i + 1 && arr[j] == arr[j - 1]) continue;
+
+                // Step 4: Two pointers
+                int left = j + 1, right = n - 1;
+                while (left < right) {
+                    long sum = (long) arr[i] + arr[j] +
+                               arr[left] + arr[right];
+
+                    if (sum == target) {
+                        ans.add(Arrays.asList(arr[i], arr[j],
+                                              arr[left], arr[right]));
+
+                        while (left < right && arr[left] == arr[left + 1]) left++;
+                        while (left < right && arr[right] == arr[right - 1]) right--;
+
+                        left++;
+                        right--;
+                    }
+                    else if (sum < target) left++;
+                    else right--;
                 }
-                
             }
         }
         return ans;
