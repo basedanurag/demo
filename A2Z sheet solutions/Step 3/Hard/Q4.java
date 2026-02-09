@@ -49,7 +49,7 @@ public class Q4 {
         return new ArrayList<>(set);
     }
     public static List<List<Integer>> optimalApproach(int[]arr, int target){
-      int n = arr.length;
+         int n = arr.length;
         List<List<Integer>> ans = new ArrayList<>();
 
         // Step 1: Sort array
@@ -86,6 +86,7 @@ public class Q4 {
         }
         return ans;
     }
+    
     public static void main(String[] args) {
         int[] arr = {1,0,-1,0,-2,2};
         System.out.println(optimalApproach(arr, 0));
