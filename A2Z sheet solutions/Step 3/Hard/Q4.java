@@ -92,5 +92,6 @@ public class Q4 {
         System.out.println(optimalApproach(arr, 0));
         System.out.println(bruteforce(arr, 0));
         System.out.println(betterAprroach(arr, 0));
+        
     }
 }

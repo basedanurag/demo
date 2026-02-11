@@ -1,14 +1,20 @@
 package com.example.ecomwebsite.services;
 
 import com.example.ecomwebsite.model.Category;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
 @Service
 public class CategoryServiceimpl implements CategoryService{
+
     private  List<Category> categoryList = new ArrayList<>();
     private Long nextId = 1L;
+
+
+
     @Override
     public List<Category> getAllCategoryList() {
         return categoryList;
@@ -20,10 +26,12 @@ public class CategoryServiceimpl implements CategoryService{
         categoryList.add(category);
     }
     // delete category
+    @Override
     public String removeCategory(Long categoryID) {
         Category category = categoryList.stream()
                 .filter(C-> C.getCategoryID().equals(categoryID))
-                .findFirst().orElse(null);
+                .findFirst()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND," Resource Not Found"));
         if (category == null) {return "Category Not Found";}
         categoryList.remove(category);
         return category.getCategoryID().toString() +"is deleted";
