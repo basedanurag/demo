@@ -22,15 +22,14 @@ public class Q6 {
         Map<Integer, Integer> hmap =  new HashMap<>();
         int count  = 0;
         int xor = 0;
+        hmap.put(0, 1);
         for(int i = 0; i < arr.length; i++){
             xor = xor ^ arr[i];
             int checkX  =  xor ^ x;
             if (hmap.containsKey(checkX)){
-                count++;
+                count += hmap.get(checkX);  
             }
-            else {
-                hmap.put(xor, hmap.getOrDefault(, null))
-            }
+            hmap.put(xor, hmap.getOrDefault(xor,0) + 1);
         }
 
 
@@ -40,5 +39,6 @@ public class Q6 {
     public static void main(String[] args) {
         int[] arr = {4, 2, 2, 6, 4};
         System.out.println(bruteForce(arr,6 ));
+        System.out.println(OptimalApproach(arr, 6));
     }
 }
