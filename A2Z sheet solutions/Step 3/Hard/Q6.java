@@ -21,9 +21,10 @@ public class Q6 {
     public static int OptimalApproach(int[] arr, int x){
         Map<Integer, Integer> hmap =  new HashMap<>();
         int count  = 0;
-        int xor = 0;
+        int xor = 0;                //        int[] arr = {4, 2, 2, 6, 4};
+
         hmap.put(0, 1);
-        for(int i = 0; i < arr.length; i++){
+        for(int i = 0; i < arr.length; i++){ // arr[i] =  4  , 0 ^ 4 == 
             xor = xor ^ arr[i];
             int checkX  =  xor ^ x;
             if (hmap.containsKey(checkX)){
