@@ -4,7 +4,6 @@ public class Q7 {
     public static List<List<Integer>> bruteForce(int[][] intervals){
         int i = 0;
         int n =  intervals.length;
-        int m = intervals[0].length;
         List<List<Integer>> ans = new ArrayList<>();
         while (i < n) {
             int start = intervals[i][0];
