@@ -60,15 +60,15 @@ public class Q8 {
     }    
     public static void main(String[] args) {
         // example with extra space in num1
-        int [] num1 = new int[6];
+        int[] nums2 = {-3, 1, 8};
+        int n = nums2.length;
+
+        int m = 4; // number of valid sorted elements
+        int[] num1 = new int[m + n]; // allocate space for merged result
         num1[0] = -5;
         num1[1] = -2;
         num1[2] = 4;
         num1[3] = 5;
-        int m = 4;               // number of valid elements in num1
-
-        int [] nums2 = {-3, 1, 8};
-        int n = nums2.length;
 
         mergeoptimal(num1, m, nums2, n);
 
