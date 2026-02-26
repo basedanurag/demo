@@ -33,21 +33,19 @@ public class Q8 {
             else  num2[i - num1.length] = arr[i];
          }
     }
-    public static void mergeoptimal(int[] num1 , int[] num2){
-        // i: last valid index in nums1
-        int m =  num1.length;
-        int n =  num2.length;
-        int i = m - 1;
+    /**
+     * Merge two sorted arrays where {@code num1} has enough space at the end
+     * to hold all elements of {@code num2}. The first {@code m} elements of
+     * {@code num1} are the valid sorted numbers, and {@code n} is the length of
+     * {@code num2}. The result is stored in {@code num1}.
+     */
+    public static void mergeoptimal(int[] num1 , int m, int[] num2, int n){
+        // pointers for valid parts of each array
+        int i = m - 1;            // last index of valid elements in num1
+        int j = n - 1;            // last index in num2
+        int k = m + n - 1;        // last index of merged array in num1
 
-        // j: last index in nums2
-        int j = n - 1;
-
-        // k: last index in nums1 including extra 0s
-        int k = m + n - 1;
-
-        // Fill nums1 from the back
         while (i >= 0 && j >= 0) {
-            // Place larger element from end of nums1 or nums2
             if (num1[i] > num2[j]) {
                 num1[k--] = num1[i--];
             } else {
@@ -55,19 +53,29 @@ public class Q8 {
             }
         }
 
-        // If nums2 has leftovers, copy them to nums1
+        // copy leftover elements from num2 if any
         while (j >= 0) {
             num1[k--] = num2[j--];
         }
-
-        // Remaining nums1 elements are already in correct position
     }    
     public static void main(String[] args) {
-        int [] num1 = {-5, -2, 4, 5, 0, 0 };
+        // example with extra space in num1
+        int [] num1 = new int[6];
+        num1[0] = -5;
+        num1[1] = -2;
+        num1[2] = 4;
+        num1[3] = 5;
+        int m = 4;               // number of valid elements in num1
 
+        int [] nums2 = {-3, 1, 8};
+        int n = nums2.length;
 
-        int []nums2 = {-3, 1, 8} ;
+        mergeoptimal(num1, m, nums2, n);
 
-        mergeoptimal(num1,nums2);
+        // print merged result
+        for (int val : num1) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
     }
 }
