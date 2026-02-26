@@ -1,6 +1,6 @@
-import java.util.Arrays;
 
-public class Q8 {
+
+public class Q8 {     
     public void merge(long[] num1, long [] num2){
         long[] arr = new long[num1.length + num2.length];
         int left = 0;
@@ -33,28 +33,41 @@ public class Q8 {
             else  num2[i - num1.length] = arr[i];
          }
     }
-    public static void mergeoptimal(long[] num1 , long[] num2){
-        int left = num1.length - 1;
-        int right =  0;
-        long temp = 0;
-        while(left >= 0 && right < num2.length){
-             if(num1[left] > num2[right]) {
-                temp  = num1[left];
-                num1[left] =  num2[right];
-                num2[right] = temp;
-                left++;
-                right--;
-             }
-             else{
-                 break;
+    public static void mergeoptimal(int[] num1 , int[] num2){
+        // i: last valid index in nums1
+        int m =  num1.length;
+        int n =  num2.length;
+        int i = m - 1;
 
-             }
+        // j: last index in nums2
+        int j = n - 1;
 
-             Arrays.sort(num1);
-             Arrays.sort(num2);
+        // k: last index in nums1 including extra 0s
+        int k = m + n - 1;
+
+        // Fill nums1 from the back
+        while (i >= 0 && j >= 0) {
+            // Place larger element from end of nums1 or nums2
+            if (num1[i] > num2[j]) {
+                num1[k--] = num1[i--];
+            } else {
+                num1[k--] = num2[j--];
+            }
         }
-    }
+
+        // If nums2 has leftovers, copy them to nums1
+        while (j >= 0) {
+            num1[k--] = num2[j--];
+        }
+
+        // Remaining nums1 elements are already in correct position
+    }    
     public static void main(String[] args) {
-        
+        int [] num1 = {-5, -2, 4, 5, 0, 0 };
+
+
+        int []nums2 = {-3, 1, 8} ;
+
+        mergeoptimal(num1,nums2);
     }
 }
