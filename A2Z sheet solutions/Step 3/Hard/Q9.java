@@ -53,6 +53,28 @@ public class Q9{
         
         return ans;
     }
+    public static int[] optimalAprroachXorMethod(int[] arr) {
+        int n = arr.length;
+        int xr = 0;
+        for (int i = 0; i < arr.length; i++) {
+            xr ^= arr[i];
+            xr ^= (i+ 1);
+        }
+        int digcount = 0;
+        while(1){
+            if((xr & (1 << digcount)) != 0){
+                break;
+            }
+            digcount++;
+        }
+        int zero = 0;
+        int one  = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] & (1 << digcount ) != 0){
+
+            }
+        }
+    }
     public static int[] optimalAprroach(int[] arr){
         int n  = arr.length;
         long s = 0, s2= 0;
