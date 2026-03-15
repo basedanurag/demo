@@ -22,7 +22,7 @@ public class Q6{
         return -1;
     }
     public static int optimal (int [] arr, int target){
-        int low  = 0; 
+        int low  = 0; // solved using upper bound code lol
         int high  =  arr.length - 1;
         int res = -1;
         while(low <= high){
