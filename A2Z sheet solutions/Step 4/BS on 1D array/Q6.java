@@ -21,9 +21,26 @@ public class Q6{
         }
         return -1;
     }
+    public static int optimal (int [] arr, int target){
+        int low  = 0; 
+        int high  =  arr.length - 1;
+        int res = -1;
+        while(low <= high){
+            int mid  =  low + (high - low)/2;
+            if(arr[mid] > target){
+                res = mid - 1;
+                high = mid - 1;
+            }
+            else{
+               low = mid + 1;
+            }
+        }
+        return res;
+    }
     public static void main(String[] args) {
         int array[] = {3, 4, 13, 13, 13, 20, 40};
         System.out.println(bruteforce(array, 60));
-        System.out.println(bruteforce2(array, 60));
+        System.out.println(bruteforce2(array, 13));
+        System.out.println(optimal(array, 13));
     }
 }
