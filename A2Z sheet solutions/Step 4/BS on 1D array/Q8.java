@@ -20,7 +20,7 @@ public class Q8{
             }
             if(arr[low] <= arr[mid]) {
                 // if left part is sorted
-                if(arr[low]<= target && target < arr[mid]){
+                if(arr[low]<= target && target <= arr[mid]){
                     high = mid - 1;
                 }
                 else {
