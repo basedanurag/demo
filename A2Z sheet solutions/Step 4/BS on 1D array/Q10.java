@@ -7,7 +7,7 @@ public class Q10 {
         return min;
     }
     public static int optimalAproach(int[] arr){
-        int minValue = Integer.MAX_VALUE;
+        
         int low  = 0;
         int high  =  arr.length - 1;
         if(arr.length == 1) return arr[low];
