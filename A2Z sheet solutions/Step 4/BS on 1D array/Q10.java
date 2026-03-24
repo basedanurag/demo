@@ -6,8 +6,28 @@ public class Q10 {
         }
         return min;
     }
+    public static int optimalAproach(int[] arr){
+        int minValue = Integer.MAX_VALUE;
+        int low  = 0;
+        int high  =  arr.length - 1;
+        if(arr.length == 1) return arr[low];
+
+        while (low < high) {
+            int mid = low + (high - low)/2;
+            // check for last element and first element
+            if ( arr[mid] > arr[high]){
+                low = mid + 1;
+            }else {
+                high  = mid ;
+            }
+            
+        }
+        return arr[low];
+    }
     public static void main(String[] args) {
-        int[] arr = {4,5,6,7,0,1,2,3};
+        int[] arr = {3,4,5,1,2};
         System.out.println(bruteForce(arr));
+
+        System.out.println(optimalAproach(arr));
     }
 }
