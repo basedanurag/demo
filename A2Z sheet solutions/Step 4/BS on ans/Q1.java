@@ -42,5 +42,6 @@ public class Q1{
         System.out.println(bruteforce(26));
         System.out.println("hello world");
         System.out.println(optimal(49));
+        System.out.println(optimal(2147395599));
     }
 }
