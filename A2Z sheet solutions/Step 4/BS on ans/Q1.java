@@ -1,7 +1,7 @@
 public class Q1{
     public static int bruteforce(int num) {
         
-        for (int i = 0; i < num; i++) {
+        for (int i = 1; i < num; i++) {
             int root  = 0;
              root = i * i;
             if(num == 1){
@@ -18,7 +18,7 @@ public class Q1{
         return 0;
     }   
     public static int optimal(int num){
-        
+
     }
     public static void main(String[] args) {
         System.out.println(bruteforce(16));
