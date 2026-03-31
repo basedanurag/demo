@@ -18,21 +18,25 @@ public class Q1{
         return 0;
     }   
     public static int optimal(int num){
-        int ans =  1;
+       int ans =  0;
         int low  =  1;
-        int high =  num;
+        int high =  num/2;
+        if(num == 0) return 0;
+        if (num == 1) return 1;
         while(low <= high){
-            int mid  =  (low + high)/2;
-
-            if((mid * mid) > num){
-                high = mid - 1;
+            int mid  = low +( high - low )/2;
+            long sqr = (long) mid * mid;
+            if(sqr <= num){
+                low = (int) mid + 1;
+                ans = (int) mid;
             }
             else{
-                low =  mid + 1;
-                ans  = mid;
+               high = (int) mid - 1;
             }
         }
-        return ans;
+        return ans;  
+    
+
     }
     public static void main(String[] args) {
         System.out.println(bruteforce(26));
