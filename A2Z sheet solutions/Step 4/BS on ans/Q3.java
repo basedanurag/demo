@@ -20,8 +20,30 @@ public class Q3{
         }
         return totalTime;
     }
+    public static int optimal(int[] arr, int h){
+        int maxPile = Arrays.stream(arr).max().getAsInt();
+        long low = 1; 
+        long high  = maxPile;
+        long ans = Integer.MAX_VALUE;
+        long totalHours = 0;
+
+        while(low <= high){
+            long mid = (low + high)/2;
+
+           totalHours  = function(arr, (int) mid);
+
+            if(totalHours <= h){
+                ans = mid;
+                high = mid  - 1;
+            }else{
+                low = mid + 1;
+            }
+        }
+        return (int) ans;
+    }
     public static void main(String args[]){
          int arr[] = {7, 15, 6, 3};
         System.out.println(bruteforce(arr, 8));
+        System.out.println(optimal(arr, 8));
     }
 }
