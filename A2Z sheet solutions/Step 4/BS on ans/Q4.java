@@ -37,7 +37,19 @@ public class Q4 {
         return false;
     }
     public static int optimal(int arr[], int m , int k){
-        return -1;
+        int low  = Arrays.stream(arr).min().getAsInt();
+        int high  = Arrays.stream(arr).max().getAsInt();
+        int ans = -1;
+        while(low <= high){
+            int mid  = (low + high)/ 2;
+            if (possible(arr, mid, m, k)){
+                ans = mid;
+                high = mid -1;
+            }else {
+                low = mid + 1;
+            }
+        }
+        return ans;
     }
     public static void main(String[] args) {
         int arr[] = {7, 7, 7, 7, 13, 11, 12, 7};
@@ -46,5 +58,8 @@ public class Q4 {
         int arr2[] = {1, 10, 3, 10, 2};
         int m2 = 3, k3 = 2;
         System.out.println(bruteforce(arr2,m2,k3));
+        System.out.println("optimal code testing");
+        System.out.println(optimal(arr, m , k));
+
     }
 }
