@@ -19,9 +19,38 @@ public class Q5 {
 
         return -1;
     }
+    public static int optimal(int[] arr, int limit){
+        int low  = 1;
+        int high  = Arrays.stream(arr).max().getAsInt();
+
+        int ans  = 0;
+
+        while (low <= high) {
+            int mid  = (low + high )/2;
+            int sum  = 0; // bar bar reset hoga 
+
+            for (int i = 0; i < arr.length; i++) {
+                sum += (int) Math.ceil((double) arr[i]/ mid);
+            } 
+            if(sum <= limit){
+                ans = mid;
+                high = mid - 1;
+
+            }
+            else{
+                low = mid + 1;
+            }
+        }
+
+        return ans;
+    }
 
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4, 5 };
         System.out.println(bruteforce(arr, 8));
+        System.out.println(optimal(arr, 8));
+        int arr2[] = {8,4,2,3};
+        System.out.println(bruteforce(arr2, 10));
+        System.out.println(optimal(arr2, 10));
     }
 }
