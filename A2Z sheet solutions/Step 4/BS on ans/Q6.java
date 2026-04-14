@@ -7,7 +7,7 @@ public class Q6 {
         int currLoad = 0;
 
         for (int i : weights) {
-            if(currLoad + weights[i] > capacity){
+            if(currLoad + i > capacity){
                 day++;
                 currLoad =i;
 
@@ -27,9 +27,28 @@ public class Q6 {
         }
         return right;
     }
+    public static int optimal(int[] weights, int days){
+        int low  =  Arrays.stream(weights).max().getAsInt();
+        int high = Arrays.stream(weights).sum();
+        int ans  = high;
+        while(low <= high){
+            int mid  =  low + (high - low)/2;
+            int neededDays = daysNeeded(mid, weights);
+
+            if(neededDays > days ){
+                low = mid + 1;
+            }
+            else{
+                ans  = Math.min(ans,mid);
+                high = mid - 1;
+            }
+        }
+        return ans;
+    }
     public static void main(String[] args) {
        
         int[] weights = {1,2,3,4,5};
         System.out.println(bruteforce(weights, 2));
+        System.out.println(optimal(weights, 2));
     }
 }
