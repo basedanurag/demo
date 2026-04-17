@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Q8{
     public static boolean checkPossible(int [] arr , int distance, int cows){
-        Arrays.sort(arr);
+        
         int countCows  = 1;
         int last =  arr[0];
         for (int i = 1; i < arr.length; i++) {
@@ -31,7 +31,7 @@ public class Q8{
         return ans;
     }
     public static int optimal(int arr[], int cows){
-        // Arrays.sort(arr);
+        Arrays.sort(arr);
         // int min  =  arr[0];
         // int max = arr[arr.length - 1];
        int max = Arrays.stream(arr).max().getAsInt();
