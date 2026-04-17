@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class Q8{
     public static boolean checkPossible(int [] arr , int distance, int cows){
+        Arrays.sort(arr);
         int countCows  = 1;
         int last =  arr[0];
         for (int i = 1; i < arr.length; i++) {
