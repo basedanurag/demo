@@ -1,0 +1,36 @@
+import java.util.Arrays;
+
+public class Q8{
+    public static boolean checkPossible(int [] arr , int distance, int cows){
+        int countCows  = 1;
+        int last =  arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if((arr[i] -  last) >= distance ){
+                countCows++;
+                last = arr[i];
+
+            }
+
+        }
+        if(countCows >= cows) return true;
+
+        return false;
+    }
+    public static int bruteForce(int[] arr, int cows){
+        Arrays.sort(arr);
+        int min = arr[0];
+        int max =  arr[arr.length - 1];
+        int ans = 0;
+
+        for (int i = 1; i <= (max  - min); i++) {
+            if(checkPossible(arr, i, cows)){
+                ans  =  i;
+            }
+        }
+        return ans;
+    }
+    public static void main(String[] args) {
+       int cows = 2, arr[] = {4,2,1,3,6};
+        System.out.println(bruteForce(arr, cows));
+    }
+}
