@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
-public class Q9{
-    public static boolean isPossible(int [] arr, int mid , int k){
+public class Q11 {
+   public static boolean isPossible(int [] arr, int mid , int k){
         int allocated = 1, sum = 0;
         for(int i = 0; i < arr.length; i++){
             if(arr[i] > mid) return false;
@@ -41,8 +41,7 @@ public class Q9{
         return res;
     }
     public static void main(String[] args) {
-        int arr[] = {12, 34, 67, 90};
-        int students = 2;
-        System.out.println(optimal(arr, students));
+        int boards[] = {10, 20, 30, 40}, k = 2;
+        System.out.println(optimal(boards, k));
     }
 }

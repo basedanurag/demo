@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Q9{
+public class Q10 {
     public static boolean isPossible(int [] arr, int mid , int k){
         int allocated = 1, sum = 0;
         for(int i = 0; i < arr.length; i++){
@@ -41,8 +41,7 @@ public class Q9{
         return res;
     }
     public static void main(String[] args) {
-        int arr[] = {12, 34, 67, 90};
-        int students = 2;
-        System.out.println(optimal(arr, students));
+        int[] arr = {1,2,3,4,5};
+        System.out.println(optimal(arr, 3));
     }
 }
