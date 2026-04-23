@@ -109,8 +109,9 @@ public class Q13 {
         return 0;
     }
     public static void main(String[] args) {
-        int arr[] = {2};
-        int arr2[]= {};
+        int arr[] = {1,3,4,7,10,12};
+        int arr2[]= {2,3,6,15};
         System.out.println(MostOptimal(arr, arr2));
+        
     }
 }
