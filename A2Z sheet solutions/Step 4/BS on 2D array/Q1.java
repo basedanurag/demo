@@ -23,7 +23,7 @@ public class Q1{
         int ans = arr.length;
         while (low <= high) {
             int mid = (low + high)/2;
-            if(arr[mid] == x){
+            if(arr[mid] >= x){
                 ans = mid;
                 high = mid -1;
                 
@@ -40,7 +40,8 @@ public class Q1{
         int index = -1;
         
         for (int i = 0; i < arr.length; i++) {
-            int countOnes = arr.length - lowerBound(arr[i], 1);
+            int fixindex =  lowerBound(arr[i], 1);
+            int countOnes =  arr[0].length - fixindex;
             if(countOnes > maxCount){
                 maxCount = countOnes;
                 index = i;
