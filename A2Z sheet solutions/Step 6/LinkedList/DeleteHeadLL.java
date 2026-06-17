@@ -45,18 +45,39 @@ public class DeleteHeadLL {
         }
         tNode.nexNode = null;
     }
+    public static Node deleteKthNode(Node head, int k){
+        if(head == null) return null;
+
+        if(k ==  1){
+            head = head.nexNode;
+            return head;
+        }
+        int count = 0;
+        Node tNode = head;
+        Node prev = null;
+        while (tNode != null) {
+            count++;
+            if(count == k){
+                prev.nexNode = prev.nexNode.nexNode;
+            }
+            prev = tNode;
+            tNode = tNode.nexNode;
+        }
+        return head;
+    }
     public static void main(String[] args) {
          int arr [] = {1,2,3,4,5,6};
 
         Node hNode = convertToLL(arr);
         traversal(hNode);
         System.out.println();
-        hNode = deletHeadNode(hNode);
-        System.out.println("after deleting head node");
+        // hNode = deletHeadNode(hNode);
+        // System.out.println("after deleting head node");
+        // traversal(hNode);
+        // deleteNodeTail(hNode);
+        // System.out.println("after deleting tail node");
+        // traversal(hNode);
+        deleteKthNode(hNode, 3);
         traversal(hNode);
-        deleteNodeTail(hNode);
-        System.out.println("after deleting tail node");
-        traversal(hNode);
-
     }
 }
