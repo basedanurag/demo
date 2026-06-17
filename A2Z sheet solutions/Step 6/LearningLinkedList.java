@@ -45,6 +45,16 @@ public class LearningLinkedList  {
 
         }
     }
+    public static int searchLL(Node hNode, int val){
+        Node tNode = hNode;
+        while (tNode != null) {
+            if(tNode.data == val) return 1;
+            tNode = tNode.nexNode;
+
+            
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         int arr [] = {1,2,3,4,5,6};
         Node hNode = convertToLL(arr);
@@ -52,6 +62,8 @@ public class LearningLinkedList  {
         System.out.println();
         int lengthofLL = leangthOfLL(hNode);
         System.out.println(lengthofLL);
+        System.out.println(searchLL(hNode, 3));
+        System.out.println(searchLL(hNode, 9));
        
         
         
