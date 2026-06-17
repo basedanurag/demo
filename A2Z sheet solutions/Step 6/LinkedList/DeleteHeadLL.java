@@ -27,7 +27,7 @@ public class DeleteHeadLL {
         }
         return heaNode;
     }
-     public static void traversal(Node hNode){
+    public static void traversal(Node hNode){
          Node temp = hNode;  // no need to worry because of garbage collector in java 
         // traversal done 
         while (temp != null) {
@@ -35,6 +35,10 @@ public class DeleteHeadLL {
             temp = temp.nexNode;
 
         }
+    }
+
+    public static void deleteNode(Node lNode){
+        
     }
     public static void main(String[] args) {
          int arr [] = {1,2,3,4,5,6};
