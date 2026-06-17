@@ -37,8 +37,13 @@ public class DeleteHeadLL {
         }
     }
 
-    public static void deleteNode(Node lNode){
-        
+    public static void deleteNodeTail(Node lNode){
+        if(lNode == null || lNode.nexNode == null) return;
+        Node tNode = lNode;
+        while (tNode.nexNode.nexNode != null) {
+            tNode = tNode.nexNode;
+        }
+        tNode.nexNode = null;
     }
     public static void main(String[] args) {
          int arr [] = {1,2,3,4,5,6};
@@ -47,7 +52,10 @@ public class DeleteHeadLL {
         traversal(hNode);
         System.out.println();
         hNode = deletHeadNode(hNode);
-        System.out.println();
+        System.out.println("after deleting head node");
+        traversal(hNode);
+        deleteNodeTail(hNode);
+        System.out.println("after deleting tail node");
         traversal(hNode);
 
     }
