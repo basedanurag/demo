@@ -13,7 +13,7 @@ class Node{
 }
 public class DeleteHeadLL {
     public static Node deletHeadNode(Node lNode){
-        Node tNode = lNode;
+        
         lNode = lNode.nexNode;
         return lNode;
     }
