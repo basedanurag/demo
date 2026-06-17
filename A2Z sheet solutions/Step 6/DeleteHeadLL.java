@@ -28,7 +28,7 @@ public class DeleteHeadLL {
         return heaNode;
     }
      public static void traversal(Node hNode){
-         Node temp = hNode; 
+         Node temp = hNode;  // no need to worry because of garbage collector in java 
         // traversal done 
         while (temp != null) {
             System.out.print(temp.data + " ");
