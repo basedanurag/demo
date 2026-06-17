@@ -24,16 +24,35 @@ public class LearningLinkedList  {
         }
         return heaNode;
     }
-    public static void main(String[] args) {
-        int arr [] = {1,2,3,4,5,6};
-        Node hNode = convertToLL(arr);
+    public static int leangthOfLL(Node hNode){
+        int count = 0;
         Node temp = hNode; 
+        // traversal done 
+        while (temp != null) {
+            
+            temp = temp.nexNode;
+            count++;
+
+        }
+        return count;
+    }
+    public static void traversal(Node hNode){
+         Node temp = hNode; 
         // traversal done 
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.nexNode;
 
         }
+    }
+    public static void main(String[] args) {
+        int arr [] = {1,2,3,4,5,6};
+        Node hNode = convertToLL(arr);
+        traversal(hNode);
+        System.out.println();
+        int lengthofLL = leangthOfLL(hNode);
+        System.out.println(lengthofLL);
+       
         
         
     }
