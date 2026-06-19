@@ -30,6 +30,17 @@ public class InsertionLinkedList{
 
         return temp;
     }
+    public static Node insertNodeTail(Node head , int val){
+        Node nNode =  new Node(val);
+        Node temp =  head;
+        while (temp.next != null) {
+        temp = temp.next;
+        }
+        temp.next = nNode;
+        nNode.next = null;
+        return head;
+    }
+    
     public static void traversalLL(Node hNode){
         Node temp = hNode;
         while (temp != null) {
@@ -38,12 +49,17 @@ public class InsertionLinkedList{
 
         }
     }
+
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
         Node hNode = convertToList(arr);
         traversalLL(hNode);
-        hNode = insertHead(hNode, 6);
+        hNode = insertHead(hNode, 0);
         System.out.println();
+        traversalLL(hNode);
+        System.out.println();
+
+        insertNodeTail(hNode, 6);
         traversalLL(hNode);
 
 
