@@ -37,6 +37,9 @@ public class DeletionDLL {
 
         return head;
     }
+    public static Node deletionKthvalue(Node head,int k){
+        
+    }
     public static Node arrayToDLL(int[] arr){
         Node head = new Node(arr[0]);
         Node back =  head;
