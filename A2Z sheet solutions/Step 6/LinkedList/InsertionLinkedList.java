@@ -40,6 +40,27 @@ public class InsertionLinkedList{
         nNode.next = null;
         return head;
     }
+   // insertion in the kth pos of the List 
+    public static Node insertAtKth(Node head, int val, int k, int length ){
+        if(k == 1) return insertHead(head, val);
+        if(k == length + 1) return insertNodeTail(head, val);
+        Node temp = head;
+        Node newNode = new Node(val);
+        int count =0 ;
+        while (temp.next !=  null) {
+            if(count == k){
+                Node after = temp.next.next;
+                temp.next = newNode;
+                newNode.next = after;
+
+            }
+            count++;
+            temp = temp.next;
+        }
+
+
+        return head;
+    }
     
     public static void traversalLL(Node hNode){
         Node temp = hNode;
@@ -49,9 +70,20 @@ public class InsertionLinkedList{
 
         }
     }
+    public static int lengthLL(Node head){
+         Node temp = head;
+         int count = 0;
+        while (temp != null) {
+            
+            temp = temp.next;
+            count++;
+
+        }
+        return count;
+    }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1,2,3,5,5};
         Node hNode = convertToList(arr);
         traversalLL(hNode);
         hNode = insertHead(hNode, 0);
@@ -59,9 +91,11 @@ public class InsertionLinkedList{
         traversalLL(hNode);
         System.out.println();
 
-        insertNodeTail(hNode, 6);
+        hNode = insertNodeTail(hNode, 6);
         traversalLL(hNode);
-
-
+        System.out.println();
+        int length = lengthLL(hNode);
+        hNode = insertAtKth(hNode, 4, 3, length);
+        traversalLL(hNode);
     }
 }
