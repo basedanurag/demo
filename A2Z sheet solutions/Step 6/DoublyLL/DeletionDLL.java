@@ -38,7 +38,26 @@ public class DeletionDLL {
         return head;
     }
     public static Node deletionKthvalue(Node head,int k){
-        
+        if(head == null){
+            return null;
+
+        }
+        if(k == 1) return null;
+
+        Node temp =  head;
+        int count = 1;
+        while (temp.next != null) {
+            if(count == k -1 ){
+                Node previous = temp.prev;
+                Node front = temp.next;
+                previous.next = front;
+                front.prev = previous;
+                break;
+            }
+            temp = temp.next;
+            count++;
+        }
+        return head;
     }
     public static Node arrayToDLL(int[] arr){
         Node head = new Node(arr[0]);
@@ -63,12 +82,14 @@ public class DeletionDLL {
     public static void main(String[] args) {
         int [] arr = {1,2,3,4,5};
         Node head = arrayToDLL(arr);
-        traversal(head);
-        head = deleteNodeHead(head);
-        System.out.println();
-        traversal(head);
-        System.out.println();
-        head = deleteLastNode(head);
+        // traversal(head);
+        // head = deleteNodeHead(head);
+        // System.out.println();
+        // traversal(head);
+        // System.out.println();
+        // head = deleteLastNode(head);
+        // traversal(head);
+        head = deletionKthvalue(head, 4);
         traversal(head);
     }
 }
