@@ -68,6 +68,34 @@ public class InsertionLinkedList {
 
         return head;
     }
+    public static Node insertValue(Node head, int val, int k, int length) {
+        if(head == null){
+            if(k == 1){
+                return new Node(val);
+            }else{
+                return head;
+            }
+        }
+        if (k == 1)
+            return insertHead(head, val);
+        if (k == length + 1)
+            return insertNodeTail(head, val);
+        Node temp = head;
+        Node newNode = new Node(val);
+        
+        while (temp.next != null) {
+            if (temp.next.data == k ) {
+                Node after = temp.next;
+                temp.next = newNode;
+                newNode.next = after;
+                break;
+            }
+            
+            temp = temp.next;
+        }
+
+        return head;
+    }
 
     public static void traversalLL(Node hNode) {
         Node temp = hNode;
@@ -104,6 +132,9 @@ public class InsertionLinkedList {
         System.out.println();
         int length = lengthLL(hNode);
         hNode = insertAtKth(hNode, 4, 3, length);
+        traversalLL(hNode);
+        System.out.println();
+        insertValue(hNode, 9, 5, length);
         traversalLL(hNode);
     }
 }
