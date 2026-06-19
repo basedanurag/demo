@@ -1,19 +1,22 @@
-class Node{
+class Node {
     int data;
     Node next;
-    Node(int data){
-        this.data =  data;
+
+    Node(int data) {
+        this.data = data;
         next = null;
     }
-    Node(int data, Node next){
-        this.data =  data;
+
+    Node(int data, Node next) {
+        this.data = data;
         this.next = next;
     }
 }
-public class InsertionLinkedList{
+
+public class InsertionLinkedList {
     // converting array to LL
 
-    public static Node convertToList(int[] arr){
+    public static Node convertToList(int[] arr) {
         Node hnode = new Node(arr[0]);
         Node mover = hnode;
         for (int i = 1; i < arr.length; i++) {
@@ -24,45 +27,49 @@ public class InsertionLinkedList{
         }
         return hnode;
     }
-    public static Node insertHead(Node hNode, int val){
-        Node temp =  new Node(val);
+
+    public static Node insertHead(Node hNode, int val) {
+        Node temp = new Node(val);
         temp.next = hNode;
 
         return temp;
     }
-    public static Node insertNodeTail(Node head , int val){
-        Node nNode =  new Node(val);
-        Node temp =  head;
+
+    public static Node insertNodeTail(Node head, int val) {
+        Node nNode = new Node(val);
+        Node temp = head;
         while (temp.next != null) {
-        temp = temp.next;
+            temp = temp.next;
         }
         temp.next = nNode;
         nNode.next = null;
         return head;
     }
-   // insertion in the kth pos of the List 
-    public static Node insertAtKth(Node head, int val, int k, int length ){
-        if(k == 1) return insertHead(head, val);
-        if(k == length + 1) return insertNodeTail(head, val);
+
+    // insertion in the kth pos of the List
+    public static Node insertAtKth(Node head, int val, int k, int length) {
+        if (k == 1)
+            return insertHead(head, val);
+        if (k == length + 1)
+            return insertNodeTail(head, val);
         Node temp = head;
         Node newNode = new Node(val);
-        int count =0 ;
-        while (temp.next !=  null) {
-            if(count == k){
-                Node after = temp.next.next;
+        int count = 1;
+        while (temp.next != null) {
+            if (count == k - 1) {
+                Node after = temp.next;
                 temp.next = newNode;
                 newNode.next = after;
-
+                break;
             }
             count++;
             temp = temp.next;
         }
 
-
         return head;
     }
-    
-    public static void traversalLL(Node hNode){
+
+    public static void traversalLL(Node hNode) {
         Node temp = hNode;
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -70,11 +77,12 @@ public class InsertionLinkedList{
 
         }
     }
-    public static int lengthLL(Node head){
-         Node temp = head;
-         int count = 0;
+
+    public static int lengthLL(Node head) {
+        Node temp = head;
+        int count = 0;
         while (temp != null) {
-            
+
             temp = temp.next;
             count++;
 
@@ -83,7 +91,7 @@ public class InsertionLinkedList{
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,5,5};
+        int[] arr = { 1, 2, 3, 5, 5 };
         Node hNode = convertToList(arr);
         traversalLL(hNode);
         hNode = insertHead(hNode, 0);
