@@ -59,6 +59,13 @@ public class DeletionDLL {
         }
         return head;
     }
+    public static void deleteNode(Node node){
+        Node prev = node.prev;
+        Node front  = node.next;
+        prev.next = front;
+        front.prev = prev;
+
+    }
     public static Node arrayToDLL(int[] arr){
         Node head = new Node(arr[0]);
         Node back =  head;
@@ -77,12 +84,13 @@ public class DeletionDLL {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
+        System.out.println();
     }
     
     public static void main(String[] args) {
         int [] arr = {1,2,3,4,5};
         Node head = arrayToDLL(arr);
-        // traversal(head);
+         traversal(head);
         // head = deleteNodeHead(head);
         // System.out.println();
         // traversal(head);
@@ -90,6 +98,9 @@ public class DeletionDLL {
         // head = deleteLastNode(head);
         // traversal(head);
         head = deletionKthvalue(head, 4);
+        traversal(head);
+        deleteNode(head.next.next);
+       
         traversal(head);
     }
 }
