@@ -1,5 +1,3 @@
-import org.w3c.dom.Node;
-
 class ListNode{
     int val;
     ListNode next;
