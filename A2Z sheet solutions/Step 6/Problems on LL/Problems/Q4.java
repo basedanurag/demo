@@ -1,20 +1,7 @@
- class ListNode {
+package Problems;
 
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
 
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
 public class Q4 {
     /**
  * Definition for singly-linked list.
@@ -46,4 +33,13 @@ public class Solution {
         return null;
     }
 }
+
+    public static void main(String[] args) {
+        Q4 q4 = new Q4();
+        Solution solution = q4.new Solution();
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3)));
+        head.next.next.next = head.next;
+        ListNode result = solution.detectCycle(head);
+        System.out.println(result != null ? result.val : -1);
+    }
 }

@@ -1,22 +1,8 @@
+package Problems ;
+
 import java.util.HashMap;
 import java.util.Map;
- class ListNode {
 
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
 
 public class Q3 {
     public boolean hasCycle(ListNode head) {
@@ -36,5 +22,12 @@ public class Q3 {
         }
 
         return false;
+    }
+
+    public static void main(String[] args) {
+        Q3 solution = new Q3();
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3)));
+        head.next.next.next = head.next;
+        System.out.println("Has cycle: " + solution.hasCycle(head));
     }
 }

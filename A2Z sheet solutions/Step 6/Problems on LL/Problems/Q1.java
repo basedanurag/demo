@@ -1,16 +1,7 @@
-class ListNode{
-    int val;
-    ListNode next;
-    
-    ListNode(int val) { 
-        this.val = val; 
-    }
-    ListNode(int val, ListNode next) { 
-        this.val = val; 
-        this.next = next; 
-    }
-    
-}
+package Problems ;
+
+
+
 public class Q1 {
     public static ListNode convertToLL(int[] arr){
         ListNode heaNode = new ListNode(arr[0]);
@@ -57,8 +48,10 @@ public class Q1 {
         return temp;
     }
     public static void main(String[] args) {
-       
-
+        ListNode head = convertToLL(new int[]{1, 2, 3, 4, 5});
+        traversal(head);
+        ListNode mid = middleNode(head);
+        System.out.println("Middle node value: " + mid.val);
     }
 
 }

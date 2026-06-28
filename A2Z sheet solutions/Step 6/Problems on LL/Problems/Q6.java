@@ -1,10 +1,7 @@
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-  }
+package Problems;
+
+
+
 public class Q6 {
     /**
  * Definition for singly-linked list.
@@ -51,5 +48,10 @@ public class Q6 {
        } 
        return true;  
     }
-}
 
+    public static void main(String[] args) {
+        Q6 solution = new Q6();
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
+        System.out.println("Palindrome: " + solution.isPalindrome(head));
+    }
+}
