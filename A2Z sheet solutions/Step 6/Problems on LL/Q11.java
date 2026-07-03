@@ -2,6 +2,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Q11 {
+    public static ListNode getInterSectionNodeOptimal(ListNode headA, ListNode headB){
+        ListNode tempA = headA;
+        ListNode tempB = headB;
+
+        while (tempA != tempB) {
+            tempA = tempA.next;
+            tempB = tempB.next;
+            if(tempA == tempB) return tempA;
+
+            if(tempA == null) tempA = headB;
+            if(tempB == null) tempB = headA;
+        }
+
+
+        return tempA;
+    }
     public static ListNode find(ListNode headA, ListNode headB , int d){
         ListNode tempA = headA;
         ListNode tempB =  headB;
