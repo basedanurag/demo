@@ -3,26 +3,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.print.DocFlavor.READER;
-
-class ListNode {
-
-    int val;
-    ListNode next;
-
-    public ListNode() {
-    }
-
-    public ListNode(int val) {
-        this.val = val;
-    }
-
-    public ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
 public class Q9 {
     public static ListNode merge(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);

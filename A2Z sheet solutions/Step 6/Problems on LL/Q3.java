@@ -1,8 +1,5 @@
-package Problems ;
-
 import java.util.HashMap;
 import java.util.Map;
-
 
 public class Q3 {
     public boolean hasCycle(ListNode head) {

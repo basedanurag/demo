@@ -1,5 +1,3 @@
-package Problems;
-
 public class ListNode {
 
     int val;

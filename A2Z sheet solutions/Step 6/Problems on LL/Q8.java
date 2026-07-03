@@ -1,7 +1,3 @@
-
-package Problems;
-
-
 public class Q8{
     // BRUTE FORCE SOLUTIONS 
     public ListNode removeNthFromEnd(ListNode head, int n) {
