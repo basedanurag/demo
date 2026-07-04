@@ -1,4 +1,30 @@
 public class Q12 {
+    public static int helper(ListNode head) {
+        if (head == null)
+            return 1;
+
+        int carry = helper(head.next);
+        head.val = head.val + carry;
+        if (head.val < 10) {
+            return 0;
+
+        }
+        head.val = 0;
+        return 1;
+
+    }
+
+    public static ListNode addOneRecursion(ListNode head) {
+        int carry = helper(head);
+
+        if (carry == 1) {
+            ListNode newNode = new ListNode(carry);
+            newNode.next = head;
+            return newNode;
+        }
+        return head;
+    }
+
     public static ListNode reverseLinkedList(ListNode head) {
         ListNode temp = head;
         ListNode prev = null;
@@ -58,7 +84,7 @@ public class Q12 {
         System.out.print("Input : ");
         traversal(head1);
 
-        head1 = addOne(head1);
+        head1 = addOneRecursion(head1);
 
         System.out.print("Output: ");
         traversal(head1);
@@ -73,7 +99,7 @@ public class Q12 {
         System.out.print("Input : ");
         traversal(head2);
 
-        head2 = addOne(head2);
+        head2 = addOneRecursion(head2);
 
         System.out.print("Output: ");
         traversal(head2);
@@ -88,7 +114,7 @@ public class Q12 {
         System.out.print("Input : ");
         traversal(head3);
 
-        head3 = addOne(head3);
+        head3 = addOneRecursion(head3);
 
         System.out.print("Output: ");
         traversal(head3);
@@ -101,7 +127,7 @@ public class Q12 {
         System.out.print("Input : ");
         traversal(head4);
 
-        head4 = addOne(head4);
+        head4 = addOneRecursion(head4);
 
         System.out.print("Output: ");
         traversal(head4);
@@ -117,7 +143,7 @@ public class Q12 {
         System.out.print("Input : ");
         traversal(head5);
 
-        head5 = addOne(head5);
+        head5 = addOneRecursion(head5);
 
         System.out.print("Output: ");
         traversal(head5);
