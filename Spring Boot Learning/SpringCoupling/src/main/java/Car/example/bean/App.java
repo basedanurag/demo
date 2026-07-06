@@ -8,8 +8,13 @@ public class App {
         ApplicationContext applicationContext
                 = new ClassPathXmlApplicationContext("applicationcontextbean.xml");
         MyBean myBean = (MyBean) applicationContext.getBean("myBean");
-        String string = myBean.toString();
+
+        String string = myBean.toString1();
+        String string2 = myBean.toString2();
         System.out.println(string);
+        System.out.println();
+        System.out.println(string2);
+
     }
 
 
