@@ -10,9 +10,9 @@ public class Q8 {
             return;
         }
         // taking
-        ans.add(arr[index]);
+       
         helper( index + 1, sum + arr[index], arr, ans);
-        ans.remove(ans.size() - 1);
+  
         // not taking
         helper( index + 1, sum, arr, ans);
     }
