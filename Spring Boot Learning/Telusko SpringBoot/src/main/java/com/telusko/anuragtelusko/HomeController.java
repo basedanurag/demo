@@ -1,3 +1,5 @@
+package com.telusko.anuragtelusko;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -6,6 +8,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "greeting";
+        System.out.println("Home Controller Called");
+        return "index";
     }
 }
