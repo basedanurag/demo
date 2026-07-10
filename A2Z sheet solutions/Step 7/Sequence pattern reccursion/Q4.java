@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class Q4 {
     public static int count(int[] array, int sum, int index, int k) {
@@ -25,6 +24,6 @@ public class Q4 {
     public static void main(String[] args) {
         int arr[] = { 4, 9, 2, 5, 1 };
         int k = 10;
-        System.out.println(count(arr, 0, 0, 10));
+        System.out.println(count(arr, 0, 0, k));
     }
 }
