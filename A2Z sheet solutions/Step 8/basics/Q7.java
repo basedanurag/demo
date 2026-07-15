@@ -3,7 +3,7 @@ public class Q7 {
         if((num & (1 <<i)) != 0) return true;
         return false;
     }
-    // remove the last set bit
+    // count the total setbits 
     public static int countSet(int num){
     
         int i =  0;
