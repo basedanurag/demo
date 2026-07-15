@@ -6,7 +6,7 @@ public class Q1{
         while(i < 31){
             if((ans & (1<<i)) != 0){
                 count++;
-            }
+            } 
             i++;
         }
         return count;
