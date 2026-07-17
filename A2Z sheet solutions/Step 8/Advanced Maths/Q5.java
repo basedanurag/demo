@@ -20,7 +20,7 @@ public class Q5 {
     }
 
     public static void main(String[] args) {
-        double ans   = pow(2,19);
+        double ans   = pow(2,10);
         System.out.println(ans);
     }
 }
