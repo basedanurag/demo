@@ -1,18 +1,18 @@
-class Node{
+class ListNode{
     int val;
-    Node next;
+    ListNode next;
 
-    public Node(int val){
+    public ListNode(int val){
         this.val = val;
         this.next = null;
     }
 }
 public class QueueLinkedList {
-    static Node top;
-    static Node start , end  = null;
+    static ListNode top;
+    static ListNode start , end  = null;
     static int size = 0;
     public static void push(int z){
-        Node temp =  new Node(z);
+        ListNode temp =  new ListNode(z);
         if(start == null ){
             start = end = temp;
         }
